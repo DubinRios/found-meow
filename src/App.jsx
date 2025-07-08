@@ -1,12 +1,12 @@
-import './App.css'
+import React from 'react';
+import Header from './components/Header/Header';
 
-function App() {
-
+const App = () => {
   return (
-    <>
-    <h1>Hola Cadiz</h1>
-    </>
-  )
-}
+    <div className="App">
+      <Header />
+    </div>
+  );
+};
 
-export default App
+export default App;
