@@ -10,13 +10,21 @@
   background-color: transparent;
 }
 
-.logo img {
-  width: 400px; /* Ajusta el tamaño del logo */
+.logo-container {
+    flex: 1;
+    text-align: center;
+}
+
+.logo-container img {
+  width: 200px; /* Ajusta el tamaño del logo */
+  height: auto;
 }
 
 .hamburger-menu {
   position: relative;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .menu-icon {
@@ -25,6 +33,7 @@
   justify-content: space-between;
   height: 24px;
   width: 24px;
+  position: relative;
 }
 
 .menu-icon div {

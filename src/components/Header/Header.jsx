@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css';
-import logoImg from "../../assets/images/logo.png"
+import logoImg from "../../assets/images/logo-found-meow.svg"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="logo">
+      <div className="logo-container">
         <img src={logoImg} alt="Logo de la Empresa" />
       </div>
       <div className="hamburger-menu" onClick={toggleMenu}>
