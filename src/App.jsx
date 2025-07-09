@@ -1,14 +1,9 @@
-import './App.css'
-import Card from './components/Card/Card'
+import React from 'react';
+import { RouterProvider } from "react-router-dom";
+import AppRoutes from './routes/Routes';
 
 const App = () => {
-  return (
-    <>
-    <h1>FOUND MEOW</h1>
-    <Card />
-    </>
-
-  )
-}
+  return <RouterProvider router={AppRoutes} />;
+};
 
 export default App;
