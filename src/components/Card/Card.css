@@ -2,8 +2,7 @@
     text-align: center;
     color: rgb(44, 44, 44);
     margin-top: 30px;
-    border: #ffd478 solid 5px;
-    border-radius: 10px;
+
     box-shadow: 0px 5px 15px rgb(175, 175, 175);
     overflow: hidden;
     padding: 0;
@@ -24,4 +23,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.prueba {
+    border: #ffd478 solid 5px;
+    border-radius: 10px 10px 0 0;
 }

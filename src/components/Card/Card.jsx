@@ -5,6 +5,7 @@ import Boton from '../Boton/Boton'
 const Card = (props) => {
   return (
     <div className='cardCats'>
+      <div className='prueba'>
         <div className='imgContainer'>
             <img src={props.url} alt={props.imgRota} />
         </div>
@@ -14,6 +15,8 @@ const Card = (props) => {
         <h4>
             Personalidad: {props.temperament}
         </h4>
+      </div>
+
         <Boton />
     </div>
   )
