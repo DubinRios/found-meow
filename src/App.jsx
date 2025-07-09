@@ -1,13 +1,9 @@
-import './App.css'
-import Footer from './components/Footer/Footer'
+import React from 'react';
+import { RouterProvider } from "react-router-dom";
+import AppRoutes from './routes/Routes';
 
-function App() {
+const App = () => {
+  return <RouterProvider router={AppRoutes} />;
+};
 
-  return (
-
-     <Footer />
-
-  )
-}
-
-export default App
+export default App;
