@@ -1,26 +1,20 @@
 import React from 'react'
 import './Card.css'
+import Boton from '../Boton/Boton'
 
 const Card = (props) => {
   return (
-    <div
-        className='cardCats'
-        style={{backgroundColor: props.color}}>
-        <img src={props.url} alt={props.imgRota} />
+    <div className='cardCats'>
+        <div className='imgContainer'>
+            <img src={props.url} alt={props.imgRota} />
+        </div>
         <h2>
             {props.id}
         </h2>
-        <div className='h3'>
-            <h3>
-                Raza: {props.name}
-            </h3>
-            <h3>
-                Personalidad: {props.temperament}
-            </h3>
-        </div>
-        <p>
-            <strong>Un poco sobre {props.id}</strong>: {props.description}
-        </p>
+        <h4>
+            Personalidad: {props.temperament}
+        </h4>
+        <Boton />
     </div>
   )
 }
