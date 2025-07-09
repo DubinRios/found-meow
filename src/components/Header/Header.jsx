@@ -16,9 +16,15 @@ const Header = () => {
       </div>
       <div className="hamburger-menu" onClick={toggleMenu}>
         <div className={`menu-icon ${isOpen ? 'open' : ''}`}>
-          <div></div>
-          <div></div>
-          <div></div>
+
+          <div className="circle"></div>
+      
+          <div className="lines">
+            <div className="line line1"></div>
+            <div className="line line2"></div>
+            <div className="line line3"></div>
+
+          </div>
         </div>
         {isOpen && (
           <div className="menu-buttons">

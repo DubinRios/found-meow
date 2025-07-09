@@ -11,12 +11,12 @@
 }
 
 .logo-container {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 .logo-container img {
-  width: 200px; /* Ajusta el tamaño del logo */
+  width: 250px; 
   height: auto;
 }
 
@@ -25,35 +25,44 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  
 }
 
 .menu-icon {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 24px;
-  width: 24px;
+  height: 50px; 
+  width: 50px; 
   position: relative;
 }
 
-.menu-icon div {
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 3px solid #333;
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 18px;
+  margin-top: 16px;
+}
+
+.line {
+  height: 3.5px;
+  width: 25px;
   background-color: #333;
-  height: 4px;
-  border-radius: 2px;
-  transition: transform 0.3s ease;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
-.menu-icon.open div:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-icon.open div:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-icon.open div:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
 
 .menu-buttons {
   position: absolute;
@@ -80,4 +89,22 @@
 
 .menu-button:hover {
   color: #555;
+}
+
+/* Animaciones para convertir el ícono en una X */
+.menu-icon.open .line1 {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.menu-icon.open .line2 {
+  opacity: 0;
+}
+
+.menu-icon.open .line3 {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* Agrega transición para suavidad */
+.line {
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
