@@ -5,11 +5,12 @@
   justify-content: center;
   min-height: 80px;
   width: 100%;
-  background: #f8f8f8;
+  background: #000000;
   position: fixed;
   left: 0;
   bottom: 0;
   z-index: 100;
+  padding: 1rem;
 }
 
 .footer-nav {
@@ -18,7 +19,30 @@
   margin-bottom: 0.5rem;
 }
 
+.footer-nav a {
+  color: #fff8f0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+  color: rgb(184, 182, 182);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .footer-copyright {
-  font-size: 0.9rem;
+  font-size: clamp(0.7rem, 1.5vw, 0.95rem);
   color: #888;
+  margin-top: 0;
+  text-align: center;
+}
+
+.footer-separator {
+  color: #fff;
+  margin: 0 0.5rem;
+  user-select: none;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
