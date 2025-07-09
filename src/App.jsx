@@ -1,8 +1,7 @@
 import './App.css'
 import Card from './components/Card/Card'
 
-function App() {
-
+const App = () => {
   return (
     <>
     <h1>FOUND MEOW</h1>
@@ -12,4 +11,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
