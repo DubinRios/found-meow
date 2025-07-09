@@ -1,0 +1,22 @@
+import React from 'react'
+import './Card.css'
+import Boton from '../Boton/Boton'
+
+const Card = (props) => {
+  return (
+    <div className='cardCats'>
+        <div className='imgContainer'>
+            <img src={props.url} alt={props.imgRota} />
+        </div>
+        <h2>
+            {props.id}
+        </h2>
+        <h4>
+            Personalidad: {props.temperament}
+        </h4>
+        <Boton />
+    </div>
+  )
+}
+
+export default Card

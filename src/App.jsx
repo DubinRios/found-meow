@@ -1,12 +1,14 @@
-import React from 'react';
-import Header from './components/Header/Header';
+import './App.css'
+import Card from './components/Card/Card'
 
 const App = () => {
   return (
-    <div className="App">
-      <Header />
-    </div>
-  );
-};
+    <>
+    <h1>FOUND MEOW</h1>
+    <Card />
+    </>
+
+  )
+}
 
 export default App;
