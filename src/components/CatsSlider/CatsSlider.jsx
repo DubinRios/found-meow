@@ -37,8 +37,12 @@ const CatsSlider = () => {
   const visibleCards = getVisibleCards();
 
   return (
-    <div className="slider-container">
-      <div className="cards-wrapper">
+  <div className="slider-container">
+    <div className="slider-content">
+      <button className="side-button" onClick={prevSlide}>⏴</button>
+      <div 
+        className="cards-wrapper"
+      >
         {visibleCards.map((index, i) => (
           <div
             key={catsData[index].id}
@@ -53,12 +57,10 @@ const CatsSlider = () => {
           </div>
         ))}
       </div>
-      <div className="buttons">
-        <button onClick={prevSlide}>Anterior</button>
-        <button onClick={nextSlide}>Siguiente</button>
-      </div>
+      <button className="side-button" onClick={nextSlide}>⏵</button>
     </div>
-  );
+  </div>
+);
 };
 
 export default CatsSlider
