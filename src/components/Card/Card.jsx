@@ -13,7 +13,7 @@ const Card = (props) => {
             {props.id}
         </h2>
         <h4>
-            Personalidad: {props.temperament}
+            Nací en: {props.temperament}
         </h4>
       </div>
 

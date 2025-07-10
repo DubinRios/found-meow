@@ -1,57 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./CatsSlider.css";
 import Card from '../Card/Card'
-
-const cardsData = [
-  {
-    id: 1,
-    url: "https://placekitten.com/200/200",
-    temperament: "Juguetón",
-    imgRota: "gatito 1",
-  },
-  {
-    id: 2,
-    url: "https://placekitten.com/201/200",
-    temperament: "Curioso",
-    imgRota: "gatito 2",
-  },
-  {
-    id: 3,
-    url: "https://placekitten.com/202/200",
-    temperament: "Tranquilo",
-    imgRota: "gatito 3",
-  },
-  {
-    id: 4,
-    url: "https://placekitten.com/203/200",
-    temperament: "Cariñoso",
-    imgRota: "gatito 4",
-  },
-  {
-    id: 5,
-    url: "https://placekitten.com/204/200",
-    temperament: "Independiente",
-    imgRota: "gatito 5",
-  },
-];
+import { getCats } from '../../services/catApiServices'; 
 
 const CatsSlider = () => {
-
+  const [catsData, setCatsData] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    const fetchCats = async () => {
+      const cats = await getCats();
+      setCatsData(cats);
+    };
+    fetchCats();
+    console.log(catsData[0])
+  }, []);
+
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? cardsData.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? catsData.length - 1 : prev - 1));
   };
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev === cardsData.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === catsData.length - 1 ? 0 : prev + 1));
   };
 
   const getVisibleCards = () => {
-    const prev = (currentIndex - 1 + cardsData.length) % cardsData.length;
-    const next = (currentIndex + 1) % cardsData.length;
+    const prev = (currentIndex - 1 + catsData.length) % catsData.length;
+    const next = (currentIndex + 1) % catsData.length;
     return [prev, currentIndex, next];
   };
+
+    if (catsData.length === 0) {
+    return <p>Cargando gatitos...</p>;
+  }
 
   const visibleCards = getVisibleCards();
 
@@ -60,14 +41,14 @@ const CatsSlider = () => {
       <div className="cards-wrapper">
         {visibleCards.map((index, i) => (
           <div
-            key={cardsData[index].id}
+            key={catsData[index].id}
             className={`card ${i === 1 ? "active" : "side"}`}
           >
             <Card
-              id={cardsData[index].id}
-              url={cardsData[index].url}
-              temperament={cardsData[index].temperament}
-              imgRota={cardsData[index].imgRota}
+              id={catsData[index].breeds[0].name}
+              url={catsData[index].url}
+              temperament={catsData[index].breeds[0].origin}
+              imgRota={catsData[index].imgRota}
             />
           </div>
         ))}
