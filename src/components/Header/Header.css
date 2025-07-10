@@ -8,16 +8,30 @@
   max-width: 1200px;
   border: none;
   background-color: transparent;
+  position: relative; /* Necesario para el menú desplegable */
 }
 
 .logo-container {
   flex: 1;
-  text-align: center;
+  text-align: left;
+  margin-left: 150px;
 }
 
 .logo-container img {
-  width: 250px; 
+  width: 200px; 
   height: auto;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem; 
+  margin-right: 100px;
+}
+
+.searchbar-container {
+  display: flex;
+  align-items: center;
 }
 
 .hamburger-menu {
@@ -25,7 +39,6 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  
 }
 
 .menu-icon {
@@ -63,19 +76,20 @@
   border-radius: 10px;
 }
 
-
 .menu-buttons {
   position: absolute;
   top: 100%;
-  right: 0;
+  right: 0; 
   background-color: #fff;
   border: 1px solid #ddd;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0;
   z-index: 1000;
+  border-radius: 12px;
+  min-width: 180px;
 }
 
 .menu-button {
@@ -84,11 +98,19 @@
   color: #333;
   font-size: 1rem;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: background-color 0.3s ease;
+  padding: 0.75rem 1rem;
+  text-align: right; /* Alineación a la derecha */
+  width: 100%;
+  border-bottom: 1px solid #eee; /* Línea debajo */
+}
+
+.menu-button:last-child {
+  border-bottom: none; /* Quita la línea del último botón */
 }
 
 .menu-button:hover {
-  color: #555;
+  background-color: #fec0b928;
 }
 
 /* Animaciones para convertir el ícono en una X */
@@ -104,7 +126,53 @@
   transform: rotate(-45deg) translate(4px, -4px);
 }
 
-/* Agrega transición para suavidad */
+/* Transición para suavidad */
 .line {
   transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap; 
+    padding: 1rem;
+  }
+
+  .logo-container {
+    margin-left: 0;
+    flex: 1 1 100%; 
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .header-right {
+    flex: 1 1 100%;
+    justify-content: space-between;
+    margin-right: 0;
+    gap: 1rem;
+  }
+
+  .searchbar-container {
+    max-width: 100%;
+    flex: 1;
+    margin-left: 150px;
+  }
+
+  .hamburger-menu {
+    flex-shrink: 0;
+    margin-right: 30px;
+  }
+
+  .menu-buttons {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: auto; 
+    width: auto; 
+    min-width: 180px; 
+    max-width: 90vw; 
+    margin-top: 0.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
 }
