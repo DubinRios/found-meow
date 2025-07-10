@@ -1,10 +1,10 @@
 .btnAdoptame {
     display: block;
-    width: 100%;                /* Abarcar todo el ancho */
+    width: 100%;                
     background-color: #ffd478;
     color: rgb(37, 37, 37);
     border: none;
-    border-radius: 0;            /* Quitamos bordes redondeados */
+    border-radius: 0 0 10px 10px;            
     padding: 15px 0;
     text-align: center;
     font-weight: bold;
