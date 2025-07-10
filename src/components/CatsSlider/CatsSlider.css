@@ -77,7 +77,7 @@
 }
 
 .side-button {
-  background-color: #fff;
+  background-color: #fff8f0;
   border: none;
   padding: 8px 12px 15px;
   font-size: 45px;
@@ -87,37 +87,26 @@
 }
 
 .side-button:hover {
-  background-color: #eee;
+  background-color: #fde9d1;
   scale: 1.1;
 }
 
 
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   0% {
-    opacity: 0.7;
-    transform: translateX(0);
-    transform: scale(0.9);
+    transform: translateX(0)
+    translateY(0);
   }
-  /* 30% {
-    opacity: 0.8;
-    transform: scale(0.95);
-  }
-  60% {
-    opacity: 0.9;
-    transform: scale(0.95)
-  } */
   90% {
-    opacity: 1;
-    transform: translateX(-6px);
-    transform: scale(1);
+    transform: translateX(-200px)
+    translateY(200px);
   }
   100% {
-    opacity: 1;
-    transform: translateX(0px);
-    transform: scale(1);
+    transform: translateX(0px)
+    translateY(0);
   }
 }
 
-.cardCats {
-  animation: fadeIn 0.4s ease-in-out forwards;
-}
+.card.active {
+  animation: fadeIn 0.2s ease-in-out forwards;
+} */
