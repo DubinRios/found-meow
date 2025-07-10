@@ -6,11 +6,12 @@
   min-height: 80px;
   width: 100%;
   background: #000000;
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   bottom: 0;
   z-index: 100;
   padding: 1rem;
+  margin-top: 25px;
 }
 
 .footer-nav {
