@@ -93,6 +93,7 @@
 }
 
 .menu-button {
+  text-decoration: none;
   background-color: transparent;
   border: none;
   color: #333;
