@@ -1,4 +1,188 @@
-* {
-    justify-content: center;
-    font-family: 'Roboto', sans-serif;
+
+/* src/App.css */
+
+/*
+    @import para fuentes (ejemplo, debes generarlo desde Google Fonts)
+    Puedes añadir estas líneas al principio de tu App.css o en tu index.html
+*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Flex:wght@300;400;700&family=Righteous&display=swap');
+
+
+/*
+    1. Variables CSS para el Tema Claro (por defecto)
+*/
+:root {
+  /* Colores Generales y del Tema */
+  --background-color: #fff8f0;    /* Fondo general (tu definido) */
+  --text-color: #333333;         /* Texto principal (tu definido) */
+  --secondary-text-color: #666666; /* Gris medio para texto secundario */
+  --border-color: #e0e0e0;        /* Gris muy claro para bordes y líneas */
+
+  /* Tus Colores Definidos (Primario, Secundario, Acento, Error) */
+  --primary-color: #458199;     /* Azul/verde */
+  --secondary-color: #cc6b4f;   /* Naranja/marrón */
+  --accent-color: #AD6499;      /* Acento (tu definido) */
+  --error-color: #fd5a5d;       /* Error (tu definido) */
+
+  /* Colores Extras (sin categoría aún, para decidir dónde usarlos) */
+  --extra-color-1: #988700; /* Posiblemente para advertencias o éxito */
+  --extra-color-2: #feb600; /* Posiblemente para advertencias o éxito */
+
+  /* Colores de Tarjetas (CatCard) */
+  --card-background: #ffffff;  /* Blanco puro para el fondo de las tarjetas */
+  --card-shadow: rgba(0, 0, 0, 0.1); /* Sombra suave para las tarjetas */
+
+  /* Colores de Botones */
+    --button-primary-background: var(--primary-color);
+    --button-primary-text: #ffffff;
+    --button-secondary-background: var(--secondary-color);
+    --button-secondary-text: #ffffff;
+
+  /* Colores de Enlaces */
+    --link-color: var(--primary-color);
+    --link-hover-color: #3a6b82; /* Un tono más oscuro de tu primario */
+
+  /* Otros Colores (Header, Footer, etc.) */
+    --header-background: #ffffff;
+    --footer-background: #333333;
+    --footer-text: #ffffff;
+
+  /* Tipografías */
+  --font-heading: 'Merriweather', serif; /* Para h1 a h5 */
+  --font-body: 'Roboto Flex', sans-serif; /* Para párrafos */
+  --font-pet-name: 'Righteous', cursive; /* Para el nombre de la mascota */
+
+  /* Tamaños de Fuente Base */
+    --base-font-size: 16px;
+}
+
+/*
+    2. Estilos Globales Básicos (aplicados al body y elementos HTML base)
+    Estos estilos usan las variables definidas arriba.
+*/
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegura que html y body ocupen toda la altura */
+}
+
+body {
+    font-family: var(--font-body); /* Aplica Roboto Flex como fuente base */
+    font-size: var(--base-font-size);
+    font-weight: 300; /* Roboto Flex light por defecto en body */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Para que el Header, main y Footer se apilen */
+    -webkit-font-smoothing: antialiased; /* Mejorar el renderizado de la fuente */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estilos para títulos (h1 a h5) */
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-heading); /* Merriweather bold */
+    font-weight: 700; /* Bold para Merriweather */
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+/* Estilos específicos para el párrafo */
+p {
+    font-family: var(--font-body);
+    font-weight: 300; /* Roboto Flex light por defecto */
+    font-size: var(--base-font-size);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Clases para pesos específicos de Roboto Flex si necesitas */
+.font-roboto-medium {
+  font-weight: 400; /* Medium para Roboto Flex */
+}
+
+.font-roboto-bold {
+  font-weight: 700; /* Bold para Roboto Flex */
+}
+
+
+/* Estilos para enlaces */
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* Estilos de imagen responsive por defecto */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilos para el contenedor principal del contenido (puedes usarlo en App.jsx) */
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* --- Propiedades para el fondo de huellas distribuidas --- */
+body {
+    
+ background-image:
+        /* Huella 1 */ url('/cat-paw.svg'),
+        /* Huella 2 */ url('/cat-paw-2.svg'),
+        /* Huella 3 */ url('/cat-paw-3.svg'), 
+        /* Huella 4 */ url('/cat-paw.svg'),
+        /* Huella 5 */ url('/cat-paw-2.svg'), 
+        /* Huella 6 */ url('/cat-paw-3.svg'); 
+    
+
+    background-repeat: no-repeat;
+
+    background-position:
+    5% 10%,
+    80% 25%,
+    20% 70%,
+    60% 90%,
+    95% 50%,
+    40% 5%;
+
+    background-size:
+    60px 60px,
+    45px 45px,
+    55px 55px,
+    70px 70px,
+    50px 50px,
+    65px 65px;
+}
+/* --- Fin de propiedades de huellas distribuidas --- */
+
+
+/*
+  3. Media Queries para Estilos Globales (Mobile First)
+*/
+@media (min-width: 768px) {
+  :root {
+    --base-font-size: 17px;
+  }
+  main {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --base-font-size: 18px;
+  }
+  main {
+    padding: 40px;
+  }
 }
