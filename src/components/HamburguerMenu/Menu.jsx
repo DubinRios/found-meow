@@ -23,7 +23,7 @@ const Menu = ({isOpen, toggleMenu}) => {
         <div className="menu-buttons">
           <Link to="/" className="menu-button">Inicio</Link>
           <a className="menu-button">Favoritos ♡</a>
-          <a className="menu-button">Contáctanos</a> 
+          <Link to="/contact" className="menu-button">Contáctanos</Link> 
         </div>
         
       )}
