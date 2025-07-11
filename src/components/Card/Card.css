@@ -17,22 +17,22 @@
     overflow: hidden;
 }
 
-.imgContainer img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    mask-image: linear-gradient(
+.imgContainer_cats {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        mask-image: linear-gradient(
         black 60%,
         transparent
-    );
-}
+        );
+    }
 
-.cardCats h2 {
+.cardCats_id {
     margin-top: 10px;
     margin-bottom: 0;
 }
 
-.cardCats h4 {
+.cardCats_temperament {
     margin-top: 0;
     margin-bottom: 10px;
 }

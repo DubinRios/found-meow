@@ -4,15 +4,16 @@ import Boton from '../Boton/Boton'
 
 const Card = (props) => {
   return (
+
     <div className='cardCats'>
-      <div className='prueba'>
+      <div>
         <div className='imgContainer'>
-            <img src={props.url} alt={props.imgRota} />
+            <img className='imgContainer_cats' src={props.url} alt={props.imgRota} />
         </div>
-        <h2>
+        <h2 class='cardCats_id'>
             {props.id}
         </h2>
-        <h4>
+        <h4 class='cardCats_temperament'>
             Nací en: {props.temperament}
         </h4>
       </div>
