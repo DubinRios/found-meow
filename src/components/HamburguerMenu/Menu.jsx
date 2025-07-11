@@ -22,8 +22,8 @@ const Menu = ({isOpen, toggleMenu}) => {
       {isOpen && (
         <div className="menu-buttons">
           <Link to="/" className="menu-button">Inicio</Link>
-          <a className="menu-button">Página en Construcción</a>
           <a className="menu-button">Favoritos ♡</a>
+          <a className="menu-button">Contáctanos</a> 
         </div>
         
       )}
