@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Header.css';
 import SearchBar from '../SearchBar/SearchBar';
 import logoImg from "../../assets/images/logo-found-meow.svg"
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +36,9 @@ const Header = () => {
   return (
     <header className="header" ref={menuRef}>
       <div className="logo-container">
+      <Link to="/">
         <img src={logoImg} alt="Logo de la Empresa" />
+        </Link>
       </div>
       
       <div className="header-right">
