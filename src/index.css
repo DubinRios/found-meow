@@ -1,10 +1,97 @@
-.root{
+/* src/index.css */
+
+/* --- 1. VARIABLES CSS GLOBALES (SISTEMA DE DISEÑO) --- */
+/* Aquí definimos la paleta de colores, tipografías y tamaños base. */
+:root {
+  /* Colores Generales y del Tema */
+    --background-color: #fff8f0;
+    --text-color: #333333;
+    --secondary-text-color: #666666;
+    --border-color: #e0e0e0;
+
+  /* Colores de Marca */
+    --primary-color: #458199;
+    --secondary-color: #cc6b4f;
+    --accent-color: #AD6499;
+    --error-color: #fd5a5d;
+
+  /* Colores de Tarjetas */
+    --card-background: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+
+  /* Colores de Botones */
+    --button-primary-background: var(--primary-color);
+    --button-primary-text: #ffffff;
+    --button-secondary-background: var(--secondary-color);
+    --button-secondary-text: #ffffff;
+
+  /* Colores de Enlaces */
+    --link-color: var(--primary-color);
+    --link-hover-color: #3a6b82;
+
+  /* Colores de Header/Footer */
+    --header-background: #ffffff;
+    --footer-background: #333333;
+    --footer-text: #ffffff;
+
+  /* Tipografías */
+    --font-heading: 'Merriweather', serif;
+    --font-body: 'Roboto Flex', sans-serif;
+    --font-pet-name: 'Righteous', cursive;
+
+  /* Tamaño de Fuente Base */
+    --base-font-size: 16px;
+}
+
+
+
+/* --- 2. ESTILOS GLOBALES BÁSICOS Y RESET --- */
+/* Aplicamos estilos fundamentales a las etiquetas raíz. */
+html, body {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('./assets/images/fondo-huellas.svg');
 }
 
 body {
-    background-color: #fff8f0;
-    margin: 0;
-    font-family: Roboto, sans-serif;
-     background-image: url('./assets/images/fondo-huellas.svg');
+    font-family: var(--font-body);
+    font-size: var(--base-font-size);
+    font-weight: 300;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    
+    /* Mejorar el renderizado de la fuente */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+
+
+/* --- 3. MEDIA QUERIES PARA AJUSTES DE BASE --- */
+/* Ajustamos el tamaño de fuente base en pantallas más grandes. */
+@media (min-width: 768px) {
+    :root {
+    --base-font-size: 17px;
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+    --base-font-size: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

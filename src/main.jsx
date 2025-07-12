@@ -1,4 +1,5 @@
-import './App.css'; 
+import './App.css';  // 2. Estilos específicos de la aplicación
+import './index.css'; // 1. Estilos base y fundamentales
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
