@@ -1,6 +1,4 @@
-import React from 'react'
-import { Routes, Route, createBrowserRouter } from "react-router-dom";
-import CatsSlider from '../components/CatsSlider/CatsSlider'
+import { createBrowserRouter } from "react-router-dom";
 import Layout from '../layouts/Layout';
 import Home from '../pages/Home';
 import Contact from '../pages/Contact'; 

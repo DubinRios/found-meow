@@ -4,10 +4,10 @@ import Boton from '../Boton/Boton'
 
 const Card = (props) => {
   return (
-    <div className='cardCats'>
+    <div className='cardCats' onClick={props.onClick}>
       <div className='prueba'>
         <div className='imgContainer'>
-            <img src={props.url} alt={props.imgRota} />
+            <img src={props.url} alt={props.imgRota} className='unselectable-img' />
         </div>
         <h2>
             {props.id}
@@ -17,7 +17,9 @@ const Card = (props) => {
         </h4>
       </div>
 
-        <Boton />
+        <Boton 
+          isActive={props.btnIsActive}
+        />
     </div>
   )
 }

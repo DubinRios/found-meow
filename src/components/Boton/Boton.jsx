@@ -1,9 +1,14 @@
 import React from 'react'
 import './Boton.css'
 
-const Boton = () => {
+const Boton = ({btnIsActive}) => {
   return (
-    <button className='btnAdoptame'>Adóptame <i class="fa-solid fa-paw"></i></button>
+    <button 
+      className='btnAdoptame' 
+      disabled={btnIsActive}
+    >
+      Adóptame <i class="fa-solid fa-paw"></i>
+    </button>
   )
 }
 
