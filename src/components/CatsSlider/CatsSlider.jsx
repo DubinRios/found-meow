@@ -195,25 +195,25 @@ const CatsSlider = () => {
               }
             >
 
-              {i === 1 && (
-                <div 
-                  className="heart-icon"
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    toggleFavorite(catsData[index]?.id);
-                  }}
-                >
-                  <i className={
-                    favorites.includes(catsData[index]?.id) 
-                      ? "fa-solid fa-heart" 
-                      : isHovered 
-                        ? "fa-solid fa-heart" 
-                        : "fa-regular fa-heart"
-                  }/>
-                </div>
-              )}
+{i === 1 && (
+  <div 
+    className="heart-icon"
+    onClick={(e) => {
+      e.stopPropagation();
+      toggleFavorite(catsData[index]?.id);
+    }}
+    onMouseEnter={() => setIsHovered(true)}
+    onMouseLeave={() => setIsHovered(false)}
+  >
+    <i className={
+      favorites.includes(catsData[index]?.id)
+        ? "fa-solid fa-heart text-red-500"
+        : isHovered
+          ? "fa-solid fa-heart text-gray-300"
+          : "fa-regular fa-heart text-gray-300"
+    }/>
+  </div>
+)}
 
               <Card
                 id={catsData[index]?.breeds[0]?.name}

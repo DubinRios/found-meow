@@ -219,15 +219,19 @@ body.dark-theme .side-button:hover{
   scale: 1.05;
 }
 
+.heart-icon:active {
+  transform: scale(0.9);
+  transition: transform 0.1s ease;
+}
+
 .heart-icon .fa-regular {
   display: inline-block;
 }
-.heart-icon .fa-solid {
-  display: none;
-}
+
 .heart-icon:hover .fa-regular {
   display: none;
 }
+
 .heart-icon:hover .fa-solid {
   display: inline-block;
 }

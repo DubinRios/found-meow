@@ -1,14 +1,20 @@
 import { useReducer, useEffect } from 'react';
-import { favoritesReducer } from './reducers/favoriteReducer';
+import { favoritesReducer } from './reducers/favoritesReducer.js';
 
 export const useFavorites = () => {
   const [favorites, dispatch] = useReducer(favoritesReducer, []);
 
+  // Carga inicial desde localStorage
   useEffect(() => {
-    const savedFavorites = JSON.parse(localStorage.getItem('catFavorites'));
-    dispatch({ type: 'LOAD', payload: savedFavorites });
+    try {
+      const saved = JSON.parse(localStorage.getItem('catFavorites')) || [];
+      dispatch({ type: 'LOAD', payload: saved });
+    } catch (error) {
+      console.error("Error loading favorites:", error);
+    }
   }, []);
 
+  // Persistencia automática
   useEffect(() => {
     localStorage.setItem('catFavorites', JSON.stringify(favorites));
   }, [favorites]);
@@ -17,9 +23,5 @@ export const useFavorites = () => {
     dispatch({ type: 'TOGGLE', payload: id });
   };
 
-  const clearFavorites = () => {
-    dispatch({ type: 'CLEAR' });
-  };
-
-  return { favorites, toggleFavorite, clearFavorites };
+  return { favorites, toggleFavorite };
 };
