@@ -13,26 +13,22 @@ const CatsSlider = () => {
   const [startX, setStartX] = useState(0);
   const [currentX, setCurrentX] = useState(0);
   const sliderRef = useRef(null);
-  const intervalRef = useRef(null); // Referencia para el intervalo
+  const intervalRef = useRef(null);
 
-  // Función para comenzar el desplazamiento automático
   const startAutoSlide = (direction) => {
-    // Limpia cualquier intervalo existente
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
     
-    // Establece un nuevo intervalo
     intervalRef.current = setInterval(() => {
       if (direction === 'prev') {
         setCurrentIndex(prev => (prev === 0 ? catsData.length - 1 : prev - 1));
       } else {
         setCurrentIndex(prev => (prev === catsData.length - 1 ? 0 : prev + 1));
       }
-    }, 500); // Ajusta este valor para cambiar la velocidad
+    }, 500);
   };
 
-  // Función para detener el desplazamiento automático
   const stopAutoSlide = () => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
@@ -80,7 +76,6 @@ const CatsSlider = () => {
 
     return () => {
       isMounted = false;
-      // Limpia el intervalo al desmontar el componente
       stopAutoSlide();
     };
   }, [preloadImages]);
@@ -93,35 +88,31 @@ const CatsSlider = () => {
     setCurrentIndex((prev) => (prev === catsData.length - 1 ? 0 : prev + 1));
   };
 
-  // Maneja el inicio del arrastre (tanto ratón como touch)
   const handleDragStart = (clientX) => {
     setIsDragging(true);
     setStartX(clientX);
     setCurrentX(clientX);
   };
 
-  // Maneja el movimiento durante el arrastre (tanto ratón como touch)
   const handleDragMove = (clientX) => {
     if (!isDragging) return;
     setCurrentX(clientX);
   };
 
-  // Maneja el fin del arrastre (tanto ratón como touch)
   const handleDragEnd = () => {
     if (!isDragging) return;
     setIsDragging(false);
 
     const dragDistance = startX - currentX;
-    const threshold = 50; // Mínimo píxeles para cambiar de slide
+    const threshold = 50;
 
     if (dragDistance > threshold) {
-      nextSlide(); // Arrastre hacia la izquierda → siguiente slide
+      nextSlide();
     } else if (dragDistance < -threshold) {
-      prevSlide(); // Arrastre hacia la derecha → slide anterior
+      prevSlide();
     }
   };
 
-  // Eventos de ratón
   const handleMouseDown = (e) => {
     handleDragStart(e.clientX);
     e.preventDefault();
@@ -135,7 +126,6 @@ const CatsSlider = () => {
     handleDragEnd();
   };
 
-  // Eventos táctiles (móvil)
   const handleTouchStart = (e) => {
     const touch = e.touches[0];
     handleDragStart(touch.clientX);
@@ -144,7 +134,7 @@ const CatsSlider = () => {
   const handleTouchMove = (e) => {
     const touch = e.touches[0];
     handleDragMove(touch.clientX);
-    e.preventDefault(); // Evita el scroll en móvil
+    e.preventDefault();
   };
 
   const handleTouchEnd = () => {
@@ -193,7 +183,13 @@ const CatsSlider = () => {
           {visibleCards.map((index, i) => (
             <div
               key={catsData[index]?.id || index}
-              className={`card ${i === 1 ? "active" : "side"}`}
+              className={
+                `
+                  card 
+                  ${i === 1 ? "active" : "side"}
+                  ${i === 0 ? "left" : i === 2 ? "right" : ""}
+                `
+              }
             >
               <Card
                 id={catsData[index]?.breeds[0]?.name}

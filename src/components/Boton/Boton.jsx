@@ -5,7 +5,7 @@ const Boton = ({btnIsActive}) => {
   return (
     <button 
       className='btnAdoptame' 
-      disabled={btnIsActive}
+      disabled={!btnIsActive}
     >
       Adóptame <i class="fa-solid fa-paw"></i>
     </button>
