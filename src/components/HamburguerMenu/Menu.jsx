@@ -22,7 +22,7 @@ const Menu = ({isOpen, toggleMenu}) => {
       {isOpen && (
         <div className="menu-buttons">
           <Link to="/" className="menu-button">Inicio</Link>
-          <a className="menu-button">Favoritos ♡</a>
+          <Link to="/FavoritesPage" className="menu-button">Favoritos ♡</Link>
           <Link to="/contact" className="menu-button">Contáctanos</Link> 
         </div>
         
