@@ -59,56 +59,58 @@ const Form = () => {
 
   return (
     <form onSubmit={handleSubmit} className="formulario">
-      <h2 className="formulario__titulo">Formulario de adopción</h2>
+      <h2 className="formulario__titulo">Formulario de adopción </h2>
 
-      <label className="formulario__grupo">
-        Nombre y Apellido:
-        <input
-          type="text"
-          name="nombre"
-          value={formulario.nombre}
-          onChange={handleChange}
-          className="formulario__input"
-        />
-        {errores.nombre && <p className="formulario__error">{errores.nombre}</p>}
-      </label>
+      <div className="formulario__contenedor">
+        <div className="formulario__grupo">
+          Nombre y Apellido:
+          <input
+            type="text"
+            name="nombre"
+            value={formulario.nombre}
+            onChange={handleChange}
+            className="formulario__input"
+          />
+          {errores.nombre && <p className="formulario__error">{errores.nombre}</p>}
+        </div>
 
-      <label className="formulario__grupo">
-        Correo Electrónico:
-        <input
-          type="email"
-          name="correo"
-          value={formulario.correo}
-          onChange={handleChange}
-          className="formulario__input"
-        />
-        {errores.correo && <p className="formulario__error">{errores.correo}</p>}
-      </label>
+        <div className="formulario__grupo">
+          Correo Electrónico:
+          <input
+            type="email"
+            name="correo"
+            value={formulario.correo}
+            onChange={handleChange}
+            className="formulario__input"
+          />
+          {errores.correo && <p className="formulario__error">{errores.correo}</p>}
+        </div>
 
-      <label className="formulario__grupo">
-        Número de Teléfono:
-        <input
-          type="text"
-          name="telefono"
-          value={formulario.telefono}
-          onChange={handleChange}
-          className="formulario__input"
-        />
-        {errores.telefono && <p className="formulario__error">{errores.telefono}</p>}
-      </label>
+        <div className="formulario__grupo">
+          Número de Teléfono:
+          <input
+            type="text"
+            name="telefono"
+            value={formulario.telefono}
+            onChange={handleChange}
+            className="formulario__input"
+          />
+          {errores.telefono && <p className="formulario__error">{errores.telefono}</p>}
+        </div>
 
-      <label className="formulario__grupo">
-        Mensaje (opcional):
-        <textarea
-          name="mensaje"
-          value={formulario.mensaje}
-          onChange={handleChange}
-          className="formulario__textarea"
-        />
-      </label>
+        <div className="formulario__grupo">
+          Mensaje (opcional):
+          <textarea
+            name="mensaje"
+            value={formulario.mensaje}
+            onChange={handleChange}
+            className="formulario__textarea"
+          />
+        </div>
+      </div>
 
       <button type="submit" className="formulario__boton">
-        Enviar formulario
+        Enviar formulario <i class="fa-solid fa-paw"></i>
       </button>
     </form>
   );
