@@ -135,6 +135,10 @@ html, body {
 }
 
 body {
+    background-color: #fff8f0;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    background-image: url('./assets/images/fondo-huellas.svg');
     font-family: var(--font-body);
     font-size: var(--base-font-size);
     font-weight: 300;
