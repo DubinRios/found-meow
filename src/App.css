@@ -1,4 +1,75 @@
-* {
-    justify-content: center;
-    font-family: 'Roboto', sans-serif;
+/* src/App.css */
+
+/* --- 2. LAYOUT PRINCIPAL DE LA APLICACIÓN --- */
+/* Estos estilos aseguran que el layout (Header/Main/Footer) funcione correctamente. */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1; /* Permite que el contenido principal ocupe el espacio disponible */
+    padding: 20px;
+}
+
+/* --- 3. ESTILOS PARA COMPONENTES Y ETIQUETAS COMUNES --- */
+/* Estos estilos ya están definidos y usan variables en index.css. */
+/* Puedes comentar o quitar los siguientes bloques si quieres que index.css sea la única fuente para ellos: */
+/*
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: var(--base-font-size);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.font-roboto-medium {
+    font-weight: 400;
+}
+
+.font-roboto-bold {
+    font-weight: 700;
+}
+*/
+
+/* --- 4. MEDIA QUERIES PARA AJUSTES DE LAYOUT --- */
+/* Ajustamos el padding del contenido principal en pantallas más grandes. */
+@media (min-width: 768px) {
+    main {
+    padding: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+    padding: 40px;
+    }
 }

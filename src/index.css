@@ -1,10 +1,227 @@
-.root{
+/* src/index.css */
+
+/* --- 1. VARIABLES CSS GLOBALES (SISTEMA DE DISEÑO) --- */
+/* Aquí definimos la paleta de colores, tipografías y tamaños base. */
+
+/* === Tema CLARO (Valores por defecto en :root) === */
+:root {
+  /* Colores Generales y del Tema */
+  --background-color: #fff8f0; /* Fondo muy claro, con un toque crema/melocotón */
+  --text-color: #333333;      /* Texto principal oscuro */
+  --secondary-text-color: #666666; /* Texto secundario gris */
+  --hover-color: #f2bbab; /* Un tono más oscuro para hover */
+  --border-color: #e0e0e0;    /* Bordes claros */
+  --error-color: #fd5a5d;     /* Rojo para errores */
+
+  /* Colores de Marca */
+  --primary-color: #458199; /* Azul verdoso principal */
+  --primary-color-rgb: 69, 129, 153; /* Versión RGB para sombras/opacidades */
+  --button-hover-color: #f2bbab; /* Un poco más oscuro para hover */
+  --secondary-color: #cc6b4f; /* Naranja rojizo para acentos */
+  --accent-color: #AD6499; /* Tono púrpura para acentos adicionales */
+  --success-color: #5bb381; /* Un verde para mensajes de éxito, basado en tu logo */
+
+  /* Colores de Tarjetas/Contenedores */
+  --card-background: #ffffff; /* Fondo de tarjetas blanco */
+  --card-shadow: rgba(0, 0, 0, 0.1); /* Sombra ligera para tarjetas */
+
+  /* Colores de Botones */
+    --button-primary-background: var(--primary-color);
+    --button-primary-text: #ffffff;
+    --button-secondary-background: var(--secondary-color);
+    --button-secondary-text: #ffffff;
+    --button-hover-background: var(--hover-color);   /* Un poco más oscuro para hover */    
+
+  /* Colores de Enlaces */
+    --link-color: var(--primary-color);
+  --link-hover-color: #3a6b82; /* Tono más oscuro de primary-color para hover */
+
+  /* Colores de Header/Footer */
+    --header-background: #ffffff;
+    --footer-background: #333333;
+    --footer-text: #ffffff;
+
+    .menu-button:hover {
+    background-color: var(--secondary-color);
+}
+
+  /* Tipografías */
+    --font-heading: 'Merriweather', serif;
+    --font-body: 'Roboto Flex', sans-serif;
+    --font-pet-name: 'Righteous', cursive;
+
+  /* Tamaño de Fuente Base */
+    --base-font-size: 16px;
+
+  /* Huellas de Fondo (Tema Claro) */
+  --paw-filter: none; /* No aplicar filtro en tema claro */
+}
+
+
+
+
+/* === Tema OSCURO (Valores para body.dark-theme) === */
+body.dark-theme {
+  /* Colores Generales y del Tema */
+    --background-color: #10141c; /* Fondo oscuro (azul pizarra muy oscuro) */
+    --text-color: #e2e8f0;      /* Texto principal claro (gris muy claro) */
+    --secondary-text-color: #a0aec0; /* Texto secundario gris medio */
+    --hover-color: #2d3748; /* Un tono más oscuro para hover */
+    --border-color: #4a5568;    /* Bordes oscuros */
+    --error-color: #ef817c;     /* Rojo de error más claro para oscuro */
+
+    /* src/index.css */
+
+/* ... tu selector body (modificado en el Paso 1) ... */
+
+/* Huella en modo oscuro */
+body.dark-theme::before {
+    background-image: url('./assets/images/fondo-huellas.svg');
+    opacity: 0.05; /* Por ejemplo, un poco menos visible en oscuro */
+}
+
+
+/* ... tus variables de tema :root y body.dark-theme ... */
+/* ... el resto de tus estilos globales ... */
+
+  /* Colores de Marca */
+    --primary-color: #63b3ed; /* Azul claro brillante para contraste */
+    --primary-color-rgb: 99, 179, 237;
+    --secondary-color: #feb2b2; /* Naranja rojizo más suave/claro para oscuro */
+    --button-hover-color: #162b34; /* Un poco más oscuro para hover */
+    --accent-color: #b794f4; /* Tono púrpura más claro para oscuro */
+    --success-color: #68d391; /* Verde más claro para oscuro */
+
+  /* Colores de Tarjetas/Contenedores */
+    --card-background: #2d3748; /* Fondo de tarjetas gris azulado más claro */
+    --card-shadow: rgba(0, 0, 0, 0.4); /* Sombra más pronunciada en oscuro */
+
+  /* Colores de Botones */
+    --button-primary-background: var(--primary-color);
+    --button-primary-text: var(--background-color); /* Texto de botón oscuro */
+    --button-secondary-background: var(--hover-color);
+    --button-secondary-text: var(--background-color); /* Texto de botón oscuro */
+    --button-hover-background:var(--hover-color); 
+
+  /* Colores de Enlaces */
+    --link-color: var(--primary-color);
+    --link-hover-color: color-mix(in srgb, var(--primary-color) 80%, white); /* Enlace hover más claro */
+
+  /* Colores de Header/Footer */
+    --header-background: #2d3748; /* Header oscuro */
+    --footer-background: #458199; /* Footer muy oscuro */
+    --footer-text: #e2e8f0; /* Texto de footer claro */
+
+   
+
+}
+
+
+/* --- 2. ESTILOS GLOBALES BÁSICOS Y RESET --- */
+/* Aplicamos estilos fundamentales a las etiquetas raíz. */
+html, body {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    /* La imagen de fondo de las huellas es fija aquí */
+    background-image: url('./assets/images/fondo-huellas.svg');
+    background-repeat: no-repeat; /* Asegúrate de que no se repita si es un patrón muy grande */
+    background-position: center center; /* Centra la imagen */
+    background-size: cover; /* Asegura que cubra todo el área */
+    /* Aplica el filtro y opacidad a la imagen de fondo */
+    filter: var(--paw-filter);
+    opacity: var(--paw-opacity);
+    transition: filter 0.3s ease, opacity 0.3s ease; /* Transición suave para las huellas */
 }
 
 body {
     background-color: #fff8f0;
     margin: 0;
     font-family: Roboto, sans-serif;
-     background-image: url('./assets/images/fondo-huellas.svg');
+    background-image: url('./assets/images/fondo-huellas.svg');
+    font-family: var(--font-body);
+    font-size: var(--base-font-size);
+    font-weight: 300;
+    /* Usa las variables del tema para el color de fondo y texto del body */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    /* Ya tienes esta transición, lo cual es bueno */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+    /* Mejorar el renderizado de la fuente */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+/* --- 3. ESTILOS PARA COMPONENTES Y ETIQUETAS COMUNES (que usan variables) --- */
+/* (Puedes mover esto desde App.css si quieres consolidar más, o dejarlo en App.css y asegurarte de que use las variables) */
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text-color); /* Usa la variable */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: var(--base-font-size);
+    color: var(--text-color); /* Usa la variable */
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color); /* Usa la variable */
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--link-hover-color); /* Usa la variable */
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Clases de utilidad para fuentes */
+.font-roboto-medium {
+    font-weight: 400;
+}
+
+.font-roboto-bold {
+    font-weight: 700;
+}
+
+/* --- 4. MEDIA QUERIES PARA AJUSTES DE BASE --- */
+/* Ajustamos el tamaño de fuente base en pantallas más grandes. */
+@media (min-width: 768px) {
+    :root {
+    --base-font-size: 17px;
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+    --base-font-size: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

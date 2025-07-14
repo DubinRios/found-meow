@@ -1,4 +1,3 @@
-import React from 'react'
 import ContactCard from '../components/ContactCard/ContactCard'
 import TeamSection from '../components/TeamSection/TeamSection'
 import Map from '../components/Map/Map'
