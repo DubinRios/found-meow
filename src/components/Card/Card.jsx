@@ -18,7 +18,9 @@ const Card = (props) => {
         </h4>
       </div>
 
-        <Boton />
+        <Boton 
+          isActive={props.btnIsActive}
+        />
     </div>
   )
 }
