@@ -5,7 +5,7 @@
   justify-content: center;
   min-height: 80px;
   width: 100%;
-  background: #333333;
+  background:var(--footer-background);
   color: #fff8f0;
   left: 0;
   bottom: 0;
@@ -20,7 +20,7 @@
 }
 
 .footer-nav a {
-  color: #fff8f0;
+  color: var (--footer-text);
   text-decoration: none;
   font-weight: 500;
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
@@ -28,20 +28,20 @@
 }
 
 .footer-nav a:hover {
-  color: rgb(184, 182, 182);
+  color: var (--footer-text);
   text-decoration: underline;
   cursor: pointer;
 }
 
 .footer-copyright {
   font-size: clamp(0.7rem, 1.5vw, 0.95rem);
-  color: #888;
+  color: var (--footer-text);
   margin-top: 0;
   text-align: center;
 }
 
 .footer-separator {
-  color: #fff;
+  color: var (--footer-text);
   margin: 0 0.5rem;
   user-select: none;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
