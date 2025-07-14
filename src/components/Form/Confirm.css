@@ -1,0 +1,10 @@
+.formulario--confirmacion {
+  text-align: center;
+  border-color: #b6e1b6;
+  background-color: #eafbea;
+}
+
+.formulario__mensaje {
+  font-size: 1rem;
+  color: #256029;
+}

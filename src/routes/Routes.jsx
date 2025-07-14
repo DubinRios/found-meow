@@ -4,6 +4,7 @@ import CatsSlider from '../components/CatsSlider/CatsSlider'
 import Layout from '../layouts/Layout';
 import Home from '../pages/Home';
 import Contact from '../pages/Contact'; 
+import AdoptForm from '../pages/AdoptForm';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />
+      },
+      {
+        path: "AdoptForm",
+        element: <AdoptForm />
       }
     ]
   }
