@@ -1,15 +1,11 @@
 /* src/App.css */
 
-/* --- 1. IMPORTACIÓN DE FUENTES --- */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Flex:wght@300;400;700&family=Righteous&display=swap' );
-
 /* --- 2. LAYOUT PRINCIPAL DE LA APLICACIÓN --- */
 /* Estos estilos aseguran que el layout (Header/Main/Footer) funcione correctamente. */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 main {
@@ -18,7 +14,9 @@ main {
 }
 
 /* --- 3. ESTILOS PARA COMPONENTES Y ETIQUETAS COMUNES --- */
-/* Estilos por defecto para los elementos que usarás en tu aplicación. */
+/* Estos estilos ya están definidos y usan variables en index.css. */
+/* Puedes comentar o quitar los siguientes bloques si quieres que index.css sea la única fuente para ellos: */
+/*
 h1, h2, h3, h4, h5 {
     font-family: var(--font-heading);
     font-weight: 700;
@@ -53,45 +51,16 @@ img {
     display: block;
 }
 
-/* Clases de utilidad para fuentes */
 .font-roboto-medium {
-  font-weight: 400;
+    font-weight: 400;
 }
 
 .font-roboto-bold {
-  font-weight: 700;
+    font-weight: 700;
 }
+*/
 
-/* --- 4. ESTILOS DECORATIVOS ESPECÍFICOS DE LA APP --- */
-body {
- 
-    background-image:
-        var(--paw-1),
-        var(--paw-2),
-        var(--paw-3),
-        var(--paw-1),
-        var(--paw-2),
-        var(--paw-3);
-    
-    /* El resto de propiedades de background se quedan exactamente igual */
-    background-repeat: no-repeat;
-    background-position:
-        5% 10%,
-        80% 25%,
-        20% 70%,
-        60% 90%,
-        95% 50%,
-        40% 5%;
-    background-size:
-        60px 60px,
-        45px 45px,
-        55px 55px,
-        70px 70px,
-        50px 50px,
-        65px 65px;
-}
-
-/* --- 5. MEDIA QUERIES PARA AJUSTES DE LAYOUT --- */
+/* --- 4. MEDIA QUERIES PARA AJUSTES DE LAYOUT --- */
 /* Ajustamos el padding del contenido principal en pantallas más grandes. */
 @media (min-width: 768px) {
     main {
