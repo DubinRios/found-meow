@@ -3,6 +3,7 @@ import "./CatsSlider.css";
 import Card from '../Card/Card';
 import { getCats } from '../../services/catApiServices'; 
 import Loader from "../Loader/Loader";
+import { useFavorites } from '../../hooks/useFavorites';
 
 const CatsSlider = () => {
   const [catsData, setCatsData] = useState([]);
@@ -12,6 +13,8 @@ const CatsSlider = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [currentX, setCurrentX] = useState(0);
+  const { favorites, toggleFavorite } = useFavorites();
+  const [isHovered, setIsHovered] = useState(false);
   const sliderRef = useRef(null);
   const intervalRef = useRef(null);
 
@@ -191,6 +194,27 @@ const CatsSlider = () => {
                 `
               }
             >
+
+              {i === 1 && (
+                <div 
+                  className="heart-icon"
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleFavorite(catsData[index]?.id);
+                  }}
+                >
+                  <i className={
+                    favorites.includes(catsData[index]?.id) 
+                      ? "fa-solid fa-heart" 
+                      : isHovered 
+                        ? "fa-solid fa-heart" 
+                        : "fa-regular fa-heart"
+                  }/>
+                </div>
+              )}
+
               <Card
                 id={catsData[index]?.breeds[0]?.name}
                 url={catsData[index]?.url}
