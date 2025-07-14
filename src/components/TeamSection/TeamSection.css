@@ -44,7 +44,7 @@ section {
   width: 100%;
   max-width: 160px;
   border-radius: 50%;
-  /* aspect-ratio: 1 / 1; */
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   margin-bottom: 1em;
 }
@@ -77,3 +77,15 @@ h2,
   margin-top: 0;
   color: #888;
 }
+
+/* @media screen and (max-width: 1998px) {
+  .team-card {
+    flex: 0 1 calc(100% / 3 - clamp(16px, 3vw, 32px));
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .team-card {
+    flex: 0 1 calc(100% / 2 - clamp(16px, 3vw, 32px));
+  }
+} */

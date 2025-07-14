@@ -1,6 +1,10 @@
 import React from 'react'
 import './TeamSection.css'
-import catImg from '../../assets/images/cat.jpg'
+import catImg from '../../assets/images/cat.png'
+import cat2Img from '../../assets/images/cat2.jpg'
+import cat3Img from '../../assets/images/cat3.jpg'
+import cat4Img from '../../assets/images/cat4.jpg'
+import cat5Img from '../../assets/images/cat5.jpg'
 
 const TeamMembers = [
     {
@@ -12,25 +16,25 @@ const TeamMembers = [
     {
         name: "Yelyzaveta Krasiuk",
         role: "full stack",
-        image: catImg,
+        image: cat2Img,
         bio: "Es necesario añadir algo"
     },
     {
         name: "Jesus Martin",
         role: "full stack",
-        image: catImg,
+        image: cat3Img,
         bio: "Es necesario añadir algo"
     },
     {
-        name: "Miguel Algel Rodriguez",
+        name: "Miguel Rodriguez",
         role: "full stack",
-        image: catImg,
+        image: cat4Img,
         bio: "Es necesario añadir algo"
     },
     {
         name: "Paula Apse",
         role: "full stack",
-        image: catImg,
+        image: cat5Img,
         bio: "Es necesario añadir algo"
     }
 ]
