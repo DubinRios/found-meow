@@ -235,3 +235,20 @@ body.dark-theme .side-button:hover{
 .heart-icon:hover .fa-solid {
   display: inline-block;
 }
+
+.text-gray-300 {
+  color: rgba(128, 128, 128, 0.849);
+  text-shadow: 3px 3px 2px rgba(54, 53, 53, 0.699);
+  transition: ease 1s;
+}
+
+.text-red-300 {
+  color: rgba(255, 0, 0, 0.655);
+  text-shadow: 3px 3px 2px rgba(118, 35, 48, 0.699);
+  transition: ease 1s;
+}
+
+.text-red-500 {
+  color: rgb(255, 0, 0);
+  transition: ease 1s;
+}
