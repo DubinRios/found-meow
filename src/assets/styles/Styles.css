@@ -106,7 +106,7 @@ html, body {
     margin: 0;
     padding: 0;
     /* La imagen de fondo de las huellas es fija aquí */
-    background-image: url('./assets/images/fondo-huellas.svg');
+    background-image: url('../images/fondo-huellas.svg');
     background-repeat: no-repeat; /* Asegúrate de que no se repita si es un patrón muy grande */
     background-position: center center; /* Centra la imagen */
     background-size: cover; /* Asegura que cubra todo el área */
@@ -120,7 +120,7 @@ body {
     background-color: #fff8f0;
     margin: 0;
     font-family: Roboto, sans-serif;
-    background-image: url('./assets/images/fondo-huellas.svg');
+    background-image: url('../images/fondo-huellas.svg');
     font-family: var(--font-body);
     font-size: var(--base-font-size);
     font-weight: 300;
@@ -137,7 +137,7 @@ body {
 
 /* Huella en modo oscuro */
 body.dark-theme::before {
-    background-image: url('./assets/images/fondo-huellas.svg');
+    background-image: url('../images/fondo-huellas.svg');
     opacity: 0.05; /* Por ejemplo, un poco menos visible en oscuro */
 }
 
