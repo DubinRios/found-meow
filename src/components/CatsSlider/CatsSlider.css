@@ -202,3 +202,36 @@ body.dark-theme .side-button:hover{
     filter: blur(1px);
   }
 }
+
+.heart-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: #ff4757;
+  cursor: pointer;
+  z-index: 3;
+  transition: 0.4s ease;
+}
+
+.heart-icon:hover {
+  color: #ff4757;
+  scale: 1.05;
+}
+
+.heart-icon:active {
+  transform: scale(0.9);
+  transition: transform 0.1s ease;
+}
+
+.heart-icon .fa-regular {
+  display: inline-block;
+}
+
+.heart-icon:hover .fa-regular {
+  display: none;
+}
+
+.heart-icon:hover .fa-solid {
+  display: inline-block;
+}
