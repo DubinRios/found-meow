@@ -67,16 +67,11 @@
   transform: rotate(-66deg);
 }
 
-/*CAMBIAR ESTO PARA EL MODO NOCTURNO MAÑANA */
-/*CAMBIAR ESTO PARA EL MODO NOCTURNO MAÑANA */
-/*CAMBIAR ESTO PARA EL MODO NOCTURNO MAÑANA */
-/*CAMBIAR ESTO PARA EL MODO NOCTURNO MAÑANA */
 body.dark-theme .loading-cat .head:after {
   content: "";
   background-image: 
-  linear-gradient(#e6dcdb 65%, transparent 65%),
-    radial-gradient(#e6dcdb 51%, #383c4b 55%,
-    #383c4b 68%, transparent 70%);
+    linear-gradient(rgba(16, 20, 28, 0.8) 65%, transparent 65%),
+    radial-gradient(rgba(16, 20, 28, 0.6) 51%, rgba(10, 14, 22, 0.75) 55%, rgba(5, 8, 14, 0.85) 68%, transparent 70%);
 }
 
 .loading-cat .head .face {
