@@ -1,4 +1,5 @@
-/* src/index.css */
+/*styles/Styles.css*/
+/* Estos estilos ya están definidos y usan variables en index.css. */
 
 /* --- 1. VARIABLES CSS GLOBALES (SISTEMA DE DISEÑO) --- */
 /* Aquí definimos la paleta de colores, tipografías y tamaños base. */
@@ -21,43 +22,41 @@
   --accent-color: #AD6499; /* Tono púrpura para acentos adicionales */
   --success-color: #5bb381; /* Un verde para mensajes de éxito, basado en tu logo */
 
-  /* Colores de Tarjetas/Contenedores */
+/* Colores de Tarjetas/Contenedores */
   --card-background: #ffffff; /* Fondo de tarjetas blanco */
-  --card-shadow: rgba(0, 0, 0, 0.1); /* Sombra ligera para tarjetas */
+  --card-shadow: rgba(0, 0, 0, 0.1); /* Sombra ligera para tarjetas */ 
 
-  /* Colores de Botones */
+   /* Colores de Botones */
     --button-primary-background: var(--primary-color);
     --button-primary-text: #ffffff;
     --button-secondary-background: var(--secondary-color);
     --button-secondary-text: #ffffff;
     --button-hover-background: var(--hover-color);   /* Un poco más oscuro para hover */    
 
-  /* Colores de Enlaces */
+    /* Colores de Enlaces */
     --link-color: var(--primary-color);
-  --link-hover-color: #3a6b82; /* Tono más oscuro de primary-color para hover */
+    --link-hover-color: #3a6b82; /* Tono más oscuro de primary-color para hover */
 
-  /* Colores de Header/Footer */
+     /* Colores de Header/Footer */
     --header-background: #ffffff;
     --footer-background: #333333;
     --footer-text: #ffffff;
 
-    .menu-button:hover {
-    background-color: var(--secondary-color);
-}
-
-  /* Tipografías */
+    /* Tipografías */
     --font-heading: 'Merriweather', serif;
     --font-body: 'Roboto Flex', sans-serif;
     --font-pet-name: 'Righteous', cursive;
 
-  /* Tamaño de Fuente Base */
+    /* Tamaño de Fuente Base */
     --base-font-size: 16px;
 
   /* Huellas de Fondo (Tema Claro) */
   --paw-filter: none; /* No aplicar filtro en tema claro */
+
+    .menu-button:hover {
+    background-color: var(--secondary-color);
 }
-
-
+}
 
 
 /* === Tema OSCURO (Valores para body.dark-theme) === */
@@ -69,20 +68,6 @@ body.dark-theme {
     --hover-color: #2d3748; /* Un tono más oscuro para hover */
     --border-color: #4a5568;    /* Bordes oscuros */
     --error-color: #ef817c;     /* Rojo de error más claro para oscuro */
-
-    /* src/index.css */
-
-/* ... tu selector body (modificado en el Paso 1) ... */
-
-/* Huella en modo oscuro */
-body.dark-theme::before {
-    background-image: url('./assets/images/fondo-huellas.svg');
-    opacity: 0.05; /* Por ejemplo, un poco menos visible en oscuro */
-}
-
-
-/* ... tus variables de tema :root y body.dark-theme ... */
-/* ... el resto de tus estilos globales ... */
 
   /* Colores de Marca */
     --primary-color: #63b3ed; /* Azul claro brillante para contraste */
@@ -111,8 +96,6 @@ body.dark-theme::before {
     --header-background: #2d3748; /* Header oscuro */
     --footer-background: #458199; /* Footer muy oscuro */
     --footer-text: #e2e8f0; /* Texto de footer claro */
-
-   
 
 }
 
@@ -150,6 +133,12 @@ body {
     /* Mejorar el renderizado de la fuente */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+/* Huella en modo oscuro */
+body.dark-theme::before {
+    background-image: url('./assets/images/fondo-huellas.svg');
+    opacity: 0.05; /* Por ejemplo, un poco menos visible en oscuro */
 }
 
 /* --- 3. ESTILOS PARA COMPONENTES Y ETIQUETAS COMUNES (que usan variables) --- */
@@ -210,17 +199,3 @@ img {
     --base-font-size: 18px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
