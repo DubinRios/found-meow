@@ -26,8 +26,8 @@
         );
     }
 
-.cardCats__id {
-    margin-top: 10px;
+.cardCats h2 {
+    margin-top: -5px;
     margin-bottom: 0;
 }
 
