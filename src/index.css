@@ -122,7 +122,6 @@ body.dark-theme::before {
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
     /* La imagen de fondo de las huellas es fija aquí */
     background-image: url('./assets/images/fondo-huellas.svg');
     background-repeat: no-repeat; /* Asegúrate de que no se repita si es un patrón muy grande */
