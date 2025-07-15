@@ -209,8 +209,8 @@ const CatsSlider = () => {
                     favorites.includes(catsData[index]?.id)
                       ? "fa-solid fa-heart text-red-500"
                       : isHovered
-                        ? "fa-solid fa-heart text-gray-300"
-                        : "fa-regular fa-heart text-gray-300"
+                        ? "fa-solid fa-heart text-red-300"
+                        : "fa-solid fa-heart text-gray-300"
                   }/>
                 </div>
               )}
