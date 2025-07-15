@@ -7,13 +7,13 @@ const Card = (props) => {
 
     <div className='cardCats'>
       <div>
-        <div className='imgContainer'>
-            <img className='imgContainer_cats' src={props.url} alt={props.imgRota} />
+        <div className='cardCats__imgContainer'>
+            <img className='cardCats__image' src={props.url} alt={props.imgRota} />
         </div>
-        <h2 class='cardCats_id'>
+        <h2 class='cardCats__id'>
             {props.id}
         </h2>
-        <h4 class='cardCats_temperament'>
+        <h4 class='cardCats__temperament'>
             Nací en: {props.temperament}
         </h4>
       </div>

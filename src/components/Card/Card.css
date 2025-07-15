@@ -8,7 +8,7 @@
     padding: 0;
 }
 
-.imgContainer {
+.cardCats__imgContainer {
     display: flex;
     margin: auto;
     width: 330px;
@@ -16,7 +16,7 @@
     overflow: hidden;
 }
 
-.imgContainer_cats {
+.cardCats__image {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -26,12 +26,12 @@
         );
     }
 
-.cardCats_id {
+.cardCats__id {
     margin-top: 10px;
     margin-bottom: 0;
 }
 
-.cardCats_temperament {
+.cardCats__temperament {
     margin-top: 0;
     margin-bottom: 10px;
 }
