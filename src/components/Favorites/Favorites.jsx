@@ -4,21 +4,7 @@ import Card from '../Card/Card'
 
 const Favorites = () => {
   return (
-    <div className='cards-wrapper'>
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
+    <div className='cards-fav'>
     <Card />
     <Card />
     <Card />

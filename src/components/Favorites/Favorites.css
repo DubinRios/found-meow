@@ -7,7 +7,19 @@
   font-weight: bold;       
 }
 
-.cards-wrapper{
-  padding: 10px;
-  margin-left: 20px;
+.cards-fav{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
+  column-gap: 1.2rem;
+  row-gap: 2.4rem;
+  justify-items: center;
+  padding: 1rem;
+  width: 100%;
+  min-height: 400px;
+}
+/*limitar el ancho máximo de cada tarjeta para 
+que no se estiren demasiado */
+.cards-fav > * {
+  max-width: 100%;
 }
