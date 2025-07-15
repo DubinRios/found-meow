@@ -6,7 +6,6 @@ import AppRoutes from './routes/Routes';
 import { ThemeProvider } from './context/ThemeContext/ThemeContext'; // Tu ruta correcta
 import ThemeToggle from './components/ThemeToggle/ThemeToggle'; // <-- ¡IMPORTA EL THEMETOGGLE!
 import './styles/Styles.css';
-import './index.css';
 import './App.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
