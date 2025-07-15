@@ -67,7 +67,7 @@
 }
 
 .menu-button:hover {
-  background-color: #fec0b928;
+  background-color: #fec0b928 !important;
 }
 
 /* Animaciones para convertir el ícono en una X */
