@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout';
 import Home from '../pages/Home/Home';
 import Contact from '../pages/Contact'; 
 import AdoptForm from '../pages/AdoptForm';
+import FavoritesPage from "../pages/FavoritesPage";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "AdoptForm",
         element: <AdoptForm />
+      },
+      {
+        path: "FavoritesPage",
+        element: <FavoritesPage />
       }
     ]
   }

@@ -1,15 +1,14 @@
-/* Header.css */
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 1rem;
   width: 100%;
   margin: 0 auto;
+  width: 100%;
   max-width: 1200px;
   border: none;
   background-color: transparent;
-  position: relative; /* Necesario para el menú desplegable */
+  position: relative; 
 }
 
 .logo-container {
@@ -31,13 +30,6 @@
 }
 
 .searchbar-container {
-  display: flex;
-  align-items: center;
-}
-
-.hamburger-menu {
-  position: relative;
-  cursor: pointer;
   display: flex;
   align-items: center;
 }
@@ -157,7 +149,7 @@
   .searchbar-container {
     max-width: 100%;
     flex: 1;
-    margin-left: 150px;
+    /* margin-left: 150px; */
   }
 
   .hamburger-menu {
