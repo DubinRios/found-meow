@@ -1,14 +1,14 @@
-/* Header.css */
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 1rem;
+  width: 100%;
   margin: 0 auto;
+  width: 100%;
   max-width: 1200px;
   border: none;
   background-color: transparent;
-  position: relative; /* Necesario para el menú desplegable */
+  position: relative; 
 }
 
 .logo-container {
@@ -30,13 +30,6 @@
 }
 
 .searchbar-container {
-  display: flex;
-  align-items: center;
-}
-
-.hamburger-menu {
-  position: relative;
-  cursor: pointer;
   display: flex;
   align-items: center;
 }
@@ -80,7 +73,8 @@
   position: absolute;
   top: 100%;
   right: 0; 
-  background-color: #fff;
+  background-color: var(--background-color
+  );
   border: 1px solid #ddd;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 0.5rem 0;
@@ -110,7 +104,7 @@
 }
 
 .menu-button:hover {
-  background-color: #fec0b928;
+  background-color: var(--hover-color); /* Cambia el color de fondo al pasar el mouse */
 }
 
 /* Animaciones para convertir el ícono en una X */
@@ -155,7 +149,7 @@
   .searchbar-container {
     max-width: 100%;
     flex: 1;
-    margin-left: 150px;
+    /* margin-left: 150px; */
   }
 
   .hamburger-menu {

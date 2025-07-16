@@ -21,7 +21,7 @@ const SearchBar = ({ onSearch }) => {
       <form onSubmit={handleSubmit} className="search-form">
         <input
           type="text"
-          placeholder="Buscar gatitos, por ciudad, raza, etc..."
+          placeholder="Encuentra un gatito..."
           value={query}
           onChange={handleChange}
           className="search-input"

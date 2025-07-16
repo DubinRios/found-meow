@@ -1,0 +1,28 @@
+.titleF {
+  color: #ff6b6b;
+  text-align: center;
+  margin: 0px 0 60px;
+  padding: 10px;
+}
+
+.cards-fav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem;
+  width: 100%;
+  min-height: 400px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards-fav > * {
+  max-width: 100%;
+  flex: 0 0 auto;
+}
+
+body.dark-theme .titleF {
+  color: #E2E8F0;
+}
