@@ -87,3 +87,21 @@
 .line {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+/* Estilos en MODO CLARO (por defecto) */
+.hamburger-menu.light .circle {
+  border-color: #333;
+}
+
+.hamburger-menu.light .line {
+  background-color: #333;
+}
+
+/* Estilos en MODO OSCURO */
+.hamburger-menu.dark .circle {
+  border-color: #fff;
+}
+
+.hamburger-menu.dark .line {
+  background-color: #fff;
+}
