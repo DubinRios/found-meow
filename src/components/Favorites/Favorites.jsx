@@ -5,7 +5,7 @@ import { getSingleCat } from '../../services/catApiServices';
 import { useFavorites } from '../../hooks/useFavorites';
 
 const Favorites = () => {
-  const { favorites } = useFavorites();
+  const { favorites, toggleFavorite } = useFavorites();
   const [favoriteCats, setFavoriteCats] = useState([]);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const Favorites = () => {
   return (
     <div className="cards-fav">
       {favoriteCats.length === 0 ? (
-        <h3>No tienes gatos favoritos aún.</h3>
+        <h3>No tienes ningún gato favorito aún.</h3>
       ) : (
         [...favoriteCats].reverse().map(cat => (
           <Card
@@ -40,6 +40,9 @@ const Favorites = () => {
             temperament={cat.breeds[0]?.origin}
             isLoaded={true}
             onClick={() => {}}
+            showFavorite={true}
+            isFavorite={favorites.includes(cat.id)}
+            onFavoriteClick={() => toggleFavorite(cat.id)}
           />
         ))
       )}
