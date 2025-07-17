@@ -14,7 +14,7 @@ const Card = (props) => {
 
   return (
 
-    <div className='cardCats'>
+    <div className='cardCats' onClick={props.onClick}>
       <div>
         <div className='cardCats__imgContainer'>
           <img className='cardCats__image' src={props.url} alt={props.imgRota} />

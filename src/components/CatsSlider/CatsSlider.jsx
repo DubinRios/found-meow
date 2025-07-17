@@ -204,7 +204,7 @@ const CatsSlider = () => {
                   if (i === 0) prevSlide();
                   else if (i === 2) nextSlide();
                 }}
-                showFavorite={i === 1} // Solo muestra corazón en la card central
+                showFavorite={i === 1}
                 isFavorite={favorites.includes(catsData[index]?.id)}
                 onFavoriteClick={() => toggleFavorite(catsData[index]?.id)}
                 style={{ cursor: isDragging ? "grabbing" : "grab" }}
