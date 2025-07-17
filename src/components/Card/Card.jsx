@@ -5,6 +5,7 @@ import Boton from '../Boton/Boton';
 const Card = (props) => {
   const [isHovered, setIsHovered] = useState(false);
   const [showDescription, setShowDescription] = useState(false)
+  
 
   const handleFavoriteClick = (e) => {
     e.stopPropagation();
@@ -22,7 +23,7 @@ const Card = (props) => {
 
     <div className='cardCats' onClick={!props.isActive ? props.onClick : handleShowDescription}>
       <div className={`cardCats__frontCard ${!showDescription ? '' : 'hidden'}`}>
-        <div className='cardCats__imgContainer'>
+        <div className={`cardCats__imgContainer ${props.isActive? 'pointer scaling' : ''}` }>
           <img className='cardCats__image unselectable-img' src={props.url} alt={props.imgRota} />
         </div>
         <h2 className='cardCats__id'>
@@ -34,7 +35,7 @@ const Card = (props) => {
       </div>
 
       <div className={`cardCats__reverseCard ${showDescription ? '' : 'hidden'}`} >
-        <div>
+        <div className={`${props.isActive? 'pointer' : ''}`}>
           <p>
             {props.description}
           </p>

@@ -22,6 +22,7 @@
   align-items: center;
   padding: 10px;
   overflow-y: auto;
+  scrollbar-width: none;
 }
 
 body.dark-theme .cardCats__reverseCard {
@@ -33,7 +34,7 @@ body.dark-theme .cardCats__reverseCard {
 }
 
 .card:active {
-  cursor: grabbing;
+  cursor: grabbing ;
 }
 
 .card.active {
@@ -47,6 +48,7 @@ body.dark-theme .cardCats__reverseCard {
   opacity: 0.7;
   z-index: 1;
   filter: blur(1px);
+  cursor: grab !important;
 }
 
 body.dark-theme .cardCats {
@@ -59,6 +61,17 @@ body.dark-theme .cardCats {
     border-radius: 10px;
     height: 280px;
     overflow: hidden;
+    transition: 0.4s ease;
+}
+
+
+.pointer:hover {
+  cursor: pointer;
+  scale: 1.05
+}
+
+.scaling:hover {
+  scale: 1.1;
 }
 
 .cardCats__image {
