@@ -13,13 +13,18 @@ const Card = (props) => {
   };
 
   return (
-    <div className='cardCats' onClick={props.onClick}>
-      <div className='prueba'>
-        <div className='imgContainer'>
-          <img src={props.url} alt={props.imgRota} className='unselectable-img' />
+
+    <div className='cardCats'>
+      <div>
+        <div className='cardCats__imgContainer'>
+          <img className='cardCats__image' src={props.url} alt={props.imgRota} />
         </div>
-        <h2>{props.id}</h2>
-        <h4>Nací en: {props.temperament}</h4>
+        <h2 class='cardCats__id'>
+            {props.id}
+        </h2>
+        <h4 class='cardCats__temperament'>
+            Nací en: {props.temperament}
+        </h4>
       </div>
 
       {props.showFavorite && (

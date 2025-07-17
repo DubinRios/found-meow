@@ -63,14 +63,13 @@
 }
 
 .menu-button:last-child {
-  border-bottom: none; /* Quita la línea del último botón */
+  border-bottom: none; /
 }
 
 .menu-button:hover {
   background-color: #fec0b928 !important;
 }
 
-/* Animaciones para convertir el ícono en una X */
 .menu-icon.open .line1 {
   transform: rotate(45deg) translate(4px, 4px);
 }
@@ -83,7 +82,22 @@
   transform: rotate(-45deg) translate(4px, -4px);
 }
 
-/* Transición para suavidad */
 .line {
   transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger-menu.light .circle {
+  border-color: #333;
+}
+
+.hamburger-menu.light .line {
+  background-color: #333;
+}
+
+.hamburger-menu.dark .circle {
+  border-color: #fff;
+}
+
+.hamburger-menu.dark .line {
+  background-color: #fff;
 }
