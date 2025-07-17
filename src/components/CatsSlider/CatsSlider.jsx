@@ -157,7 +157,7 @@ const CatsSlider = () => {
 
   return (
     <div 
-      className="slider-container"
+      className="sliderContainer"
       ref={sliderRef}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
@@ -167,9 +167,9 @@ const CatsSlider = () => {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      <div className="slider-content">
+      <div className="sliderContainer__content">
         <button 
-          className="side-button" 
+          className="sliderContainer__contentButton" 
           onClick={prevSlide}
           onMouseDown={() => startAutoSlide('prev')}
           onMouseUp={stopAutoSlide}
@@ -181,13 +181,13 @@ const CatsSlider = () => {
         >
           ⏴
         </button>
-        <div className="cards-wrapper">
+        <div className="sliderContainer__cardsWrapper">
           {visibleCards.map((index, i) => (
             <div
               key={catsData[index]?.id || index}
               className={
                 `
-                  card 
+                  sliderContainer__Card 
                   ${i === 1 ? "active" : "side"}
                   ${i === 0 ? "left" : i === 2 ? "right" : ""}
                 `
@@ -213,7 +213,7 @@ const CatsSlider = () => {
           ))}
         </div>
         <button 
-          className="side-button" 
+          className="sliderContainer__contentButton" 
           onClick={nextSlide}
           onMouseDown={() => startAutoSlide('next')}
           onMouseUp={stopAutoSlide}
