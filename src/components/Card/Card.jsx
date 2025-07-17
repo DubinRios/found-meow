@@ -14,7 +14,7 @@ const Card = (props) => {
 
   return (
     <div className='cardCats' onClick={props.onClick}>
-      <div className='prueba'>
+      <div>
         <div className='imgContainer'>
           <img src={props.url} alt={props.imgRota} className='unselectable-img' />
         </div>
