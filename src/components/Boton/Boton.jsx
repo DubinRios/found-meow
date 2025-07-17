@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Boton = () => {
   return (
-    <Link to="/AdoptForm"><button className='btnAdoptame'>Adóptame <i class="fa-solid fa-paw"></i></button></Link>
+    <Link to="/AdoptForm"><button className='btnAdoptame'>Adóptame <i className="fa-solid fa-paw"></i></button></Link>
   )
 }
 

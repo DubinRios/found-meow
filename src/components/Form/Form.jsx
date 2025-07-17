@@ -75,7 +75,7 @@ const Form = () => {
         </div>
 
         <div className="formulario__grupo">
-          Correo Electrónico:
+          <label htmlFor="nombre">Correo Electrónico:</label>
           <input
             type="email"
             name="correo"
@@ -110,7 +110,7 @@ const Form = () => {
       </div>
 
       <button type="submit" className="formulario__boton">
-        Enviar formulario <i class="fa-solid fa-paw"></i>
+        Enviar formulario <i className="fa-solid fa-paw"></i>
       </button>
     </form>
   );
