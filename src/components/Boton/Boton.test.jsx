@@ -11,7 +11,6 @@ test('renderiza el botón correctamente', () => {
     </MemoryRouter>
   );
 
-  // Verifica que el texto 'Adóptame' esté en el documento
   const boton = screen.getByRole('button', { name: /adóptame/i });
   expect(boton).toBeInTheDocument();
 });
@@ -26,7 +25,5 @@ test('el botón redirige a la ruta /AdoptForm al hacer clic', async () => {
   const boton = screen.getByRole('button', { name: /adóptame/i });
   await userEvent.click(boton);
 
-  // Como estamos en un test, no se puede verificar la navegación real sin un router configurado
-  // pero al menos aseguramos que el botón responde al clic sin error
   expect(boton).toBeEnabled();
 });

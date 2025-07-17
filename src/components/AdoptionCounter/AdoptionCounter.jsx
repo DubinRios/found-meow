@@ -9,7 +9,7 @@ const AdoptionCounter = () => {
     const interval = setInterval(() => {
       setCount((prev) => {
         if (prev < target) {
-          return prev + 86;
+          return prev + 90;
         } else {
           clearInterval(interval);
           return target;

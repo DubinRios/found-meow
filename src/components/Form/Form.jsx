@@ -75,8 +75,9 @@ const Form = () => {
         </div>
 
         <div className="formulario__grupo">
-          <label htmlFor="nombre">Correo Electrónico:</label>
-          <input
+          Correo Electrónico:
+          <input 
+            htmlFor="correo"
             type="email"
             name="correo"
             value={formulario.correo}
@@ -89,6 +90,7 @@ const Form = () => {
         <div className="formulario__grupo">
           Número de Teléfono:
           <input
+            htmlFor="teléfono"
             type="text"
             name="telefono"
             value={formulario.telefono}
