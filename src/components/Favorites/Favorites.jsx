@@ -40,7 +40,7 @@ const Favorites = () => {
             temperament={cat.breeds[0]?.origin}
             isLoaded={true}
             onClick={() => {}}
-            showFavorite={true}
+            isActive={true}
             isFavorite={favorites.includes(cat.id)}
             onFavoriteClick={() => toggleFavorite(cat.id)}
           />

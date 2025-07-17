@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-h2 {
+.teamSection__section h2 {
   font-size: clamp(1.125rem, 2vw + 0.5rem, 1.5rem);
   font-weight: 600;
   line-height: 2;
