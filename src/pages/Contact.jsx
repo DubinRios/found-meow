@@ -6,9 +6,9 @@ import Map from '../components/Map/Map'
 const Contact = () => {
   return (
     <>
-            <TeamSection />
-            <Map />
-            <ContactCard />
+      <ContactCard />
+      <Map />
+      <TeamSection />
     </>
   )
 }
