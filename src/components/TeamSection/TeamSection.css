@@ -1,11 +1,10 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box; /* Всі внутрішні padding і border враховуються в межах width: 100%, нічого не «з'їжджає» */
+  box-sizing: border-box;
 }
 
 h2 {
-  color: #333333;
   font-size: clamp(1.125rem, 2vw + 0.5rem, 1.5rem);
   font-weight: 600;
   line-height: 2;
@@ -25,6 +24,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: clamp(16px, 3vw, 32px);
+  margin-bottom: clamp(2rem, 5vw, 5rem);
 }
 
 .team-card {
@@ -33,7 +33,6 @@ section {
   flex: 0 1 clamp(180px, 40%, 280px);
   align-items: center;
   justify-content: center;
-  background-color: #fff8f0;
   padding: clamp(12px, 2vw, 24px);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -57,7 +56,6 @@ h2,
 }
 
 .team-name {
-  color: #333333;
   margin-bottom: 0.2em;
   font-size: clamp(1.125rem, 2vw + 0.5rem, 1.5rem);
   font-weight: 600;
@@ -68,14 +66,12 @@ h2,
   margin-top: 0;
   margin-bottom: 1.2em;
   font-size: clamp(1rem, 1.5vw + 0.25rem, 1.2rem);
-  color: #888;
 }
 
 .team-bio {
   font-size: clamp(0.875rem, 1vw + 0.25rem, 1rem);
   line-height: 1.5;
   margin-top: 0;
-  color: #888;
 }
 
 /* @media screen and (max-width: 1998px) {

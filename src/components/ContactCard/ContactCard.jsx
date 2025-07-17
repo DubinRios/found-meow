@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-const apiKey = import.meta.env.VITE_API_KEY;
 import './ContactCard.css'
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxURbRrgJJ42fdUKDwo4WjAgr03GAGv5HSAJzm4qCP_3mPXl6RmqzKYG90RKg5SCZq3/exec';
 
 const ContactCard = () => {
 
@@ -10,11 +11,10 @@ const ContactCard = () => {
 
   const onSubmit = async (formData) => {
     try {
-      const response = await fetch('apiKey', {
+      const response = await fetch(scriptURL, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${apiKey}`, // Necesitamos autorización?
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify(formData),
         });
@@ -59,20 +59,20 @@ const ContactCard = () => {
         <h4 className="contact-title">CONTÁCTANOS</h4>
       <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
         <input
-          {...register("name", { required: "El nombre es obligatorio" })}
+          {...register("name", { required: "* El nombre es obligatorio" })}
             placeholder="Nombre"
         />
         {errors.name && <p className="input-paragraph">{errors.name.message}</p>}
 
-      <select {...register("category", { required: "Seleccione una categoría" })}>
+      <select {...register("category", { required: "* Seleccione una categoría" })}>
         <option value="">Elegir</option>
         <option value="A">Option A</option>
         <option value="B">Option B</option>
         </select>
-
-        <input {...register("email", { required: "Email es obligatorio",  pattern: {
+        {errors.category && <p className="input-paragraph">{errors.category.message}</p>}
+        <input {...register("email", { required: "* Email es obligatorio",  pattern: {
             value: /^\S+@\S+$/i,
-            message: "Email no válido",
+            message: "* Email no válido",
         },
         })} placeholder="Email"
           />
