@@ -4,6 +4,7 @@ import Boton from '../Boton/Boton';
 
 const Card = (props) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [showDescription, setShowDescription] = useState(false)
 
   const handleFavoriteClick = (e) => {
     e.stopPropagation();
@@ -12,22 +13,37 @@ const Card = (props) => {
     }
   };
 
+  const handleShowDescription = () => {
+    setShowDescription(!showDescription)
+  }
+
   return (
 
-    <div className='cardCats'>
-      <div>
+    <div className='cardCats' onClick={!props.isActive ? props.onClick : handleShowDescription}>
+      <div className={`cardCats__frontCard ${!showDescription? '' : 'hidden'}`}>
         <div className='cardCats__imgContainer'>
-          <img className='cardCats__image' src={props.url} alt={props.imgRota} />
+          <img className='cardCats__image unselectable-img' src={props.url} alt={props.imgRota} />
         </div>
-        <h2 class='cardCats__id'>
+        <h2 className='cardCats__id'>
             {props.id}
         </h2>
-        <h4 class='cardCats__temperament'>
+        <h4 className='cardCats__temperament'>
             Nací en: {props.temperament}
         </h4>
       </div>
 
-      {props.showFavorite && (
+      <div className={`cardCats__reverseCard ${showDescription? '' : 'hidden'}`} >
+        <div>
+          <h2 className='cardCats__id'>
+            {props.id}
+          </h2>
+          <p>
+            {props.description}
+          </p>
+        </div>
+      </div>
+
+      {props.isActive && (
         <div 
           className="heart-icon"
           onClick={handleFavoriteClick}

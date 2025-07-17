@@ -1,12 +1,87 @@
-.team-grid {
-  display: grid;
-  grid-template-columns: 1fr 1 fr 1fr;
-  gap: 20px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.teamSection__section h2 {
+  font-size: clamp(1.125rem, 2vw + 0.5rem, 1.5rem);
+  font-weight: 600;
+  line-height: 2;
+  margin-bottom: 1.2em;
+}
+
+.teamSection__section {
+  --gutter: clamp(16px, 5vw, 64px);
+  padding-inline: var(--gutter);
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.team-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(16px, 3vw, 32px);
+  margin-bottom: clamp(2rem, 5vw, 5rem);
 }
 
 .team-card {
-  background-color: white;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 clamp(180px, 40%, 280px);
+  align-items: center;
+  justify-content: center;
+  padding: clamp(12px, 2vw, 24px);
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
 }
+
+.team-card img {
+  width: 100%;
+  max-width: 160px;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-bottom: 1em;
+}
+
+h2,
+.team-name,
+.team-role,
+.team-bio {
+  text-align: center;
+}
+
+.team-name {
+  margin-bottom: 0.2em;
+  font-size: clamp(1.125rem, 2vw + 0.5rem, 1.5rem);
+  font-weight: 600;
+  font-style: Merriweather;
+}
+
+.team-role {
+  margin-top: 0;
+  margin-bottom: 1.2em;
+  font-size: clamp(1rem, 1.5vw + 0.25rem, 1.2rem);
+}
+
+.team-bio {
+  font-size: clamp(0.875rem, 1vw + 0.25rem, 1rem);
+  line-height: 1.5;
+  margin-top: 0;
+}
+
+/* @media screen and (max-width: 1998px) {
+  .team-card {
+    flex: 0 1 calc(100% / 3 - clamp(16px, 3vw, 32px));
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .team-card {
+    flex: 0 1 calc(100% / 2 - clamp(16px, 3vw, 32px));
+  }
+} */
