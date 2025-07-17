@@ -15,6 +15,7 @@ const Card = (props) => {
 
   const handleShowDescription = () => {
     setShowDescription(!showDescription)
+    console.log(props.description.length)
   }
 
   return (
