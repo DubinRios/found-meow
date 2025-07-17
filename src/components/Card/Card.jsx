@@ -13,18 +13,11 @@ const Card = (props) => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className='cardCats' onClick={props.onClick}>
-      <div>
-        <div className='imgContainer'>
-          <img src={props.url} alt={props.imgRota} className='unselectable-img' />
-=======
 
     <div className='cardCats'>
       <div>
         <div className='cardCats__imgContainer'>
           <img className='cardCats__image' src={props.url} alt={props.imgRota} />
->>>>>>> 0be16c56fa2cab6a321b028e8f5015f12e8a0e23
         </div>
         <h2 class='cardCats__id'>
             {props.id}
