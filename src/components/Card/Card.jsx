@@ -21,7 +21,7 @@ const Card = (props) => {
   return (
 
     <div className='cardCats' onClick={!props.isActive ? props.onClick : handleShowDescription}>
-      <div className={`cardCats__frontCard ${!showDescription? '' : 'hidden'}`}>
+      <div className={`cardCats__frontCard ${!showDescription ? '' : 'hidden'}`}>
         <div className='cardCats__imgContainer'>
           <img className='cardCats__image unselectable-img' src={props.url} alt={props.imgRota} />
         </div>
@@ -33,11 +33,8 @@ const Card = (props) => {
         </h4>
       </div>
 
-      <div className={`cardCats__reverseCard ${showDescription? '' : 'hidden'}`} >
+      <div className={`cardCats__reverseCard ${showDescription ? '' : 'hidden'}`} >
         <div>
-          <h2 className='cardCats__id'>
-            {props.id}
-          </h2>
           <p>
             {props.description}
           </p>
