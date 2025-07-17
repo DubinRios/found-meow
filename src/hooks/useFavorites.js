@@ -1,10 +1,19 @@
 import { useReducer, useEffect } from 'react';
 import { favoritesReducer } from './reducers/favoritesReducer.js';
 
-export const useFavorites = () => {
-  const [favorites, dispatch] = useReducer(favoritesReducer, []);
+const initFavorites = () => {
+  try {
+    const saved = JSON.parse(localStorage.getItem('catFavorites'));
+    return saved || [];
+  } catch (error) {
+    console.error("Error loading favorites:", error);
+    return [];
+  }
+};
 
-  // Carga inicial desde localStorage
+export const useFavorites = () => {
+  const [favorites, dispatch] = useReducer(favoritesReducer, [], initFavorites);
+
   useEffect(() => {
     try {
       const saved = JSON.parse(localStorage.getItem('catFavorites')) || [];
@@ -14,7 +23,6 @@ export const useFavorites = () => {
     }
   }, []);
 
-  // Persistencia automática
   useEffect(() => {
     localStorage.setItem('catFavorites', JSON.stringify(favorites));
   }, [favorites]);

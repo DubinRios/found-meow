@@ -49,7 +49,7 @@
 }
 
 .menu-button {
-  text-decoration: none;
+  text-decoration: none !important;
   background-color: transparent;
   border: none;
   color: #333;
