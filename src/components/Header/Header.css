@@ -14,12 +14,15 @@
 .logo-container {
   flex: 1;
   text-align: left;
-  margin-left: 150px;
+  margin-left: 0;
+  margin-right: 320px;
 }
 
 .logo-container img {
   width: 200px; 
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .header-right {
@@ -128,45 +131,52 @@
 /* Responsive para pantallas pequeñas */
 @media (max-width: 768px) {
   .header {
-    flex-wrap: wrap; 
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     padding: 1rem;
   }
 
   .logo-container {
-    margin-left: 0;
-    flex: 1 1 100%; 
     text-align: center;
-    margin-bottom: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    margin-left: 0; 
+    flex: none;
   }
 
   .header-right {
-    flex: 1 1 100%;
-    justify-content: space-between;
-    margin-right: 0;
-    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+    margin-right: 0; 
   }
 
   .searchbar-container {
-    max-width: 100%;
     flex: 1;
-    /* margin-left: 150px; */
+    max-width: 70%;
+    display: flex;
+    justify-content: center;
   }
 
-  .hamburger-menu {
-    flex-shrink: 0;
-    margin-right: 30px;
+  .menu-icon {
+    margin: 0;
   }
 
   .menu-buttons {
     position: absolute;
     top: 100%;
     right: 0;
-    left: auto; 
-    width: auto; 
-    min-width: 180px; 
-    max-width: 90vw; 
+    left: auto;
+    width: auto;
+    min-width: 180px;
+    max-width: 90vw;
     margin-top: 0.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 }
+

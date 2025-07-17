@@ -11,7 +11,7 @@ h2 {
   margin-bottom: 1.2em;
 }
 
-section {
+.teamSection__section {
   --gutter: clamp(16px, 5vw, 64px);
   padding-inline: var(--gutter);
   width: 100%;
