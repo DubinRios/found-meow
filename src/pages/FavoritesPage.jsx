@@ -4,7 +4,7 @@ import Favorites from '../components/Favorites/Favorites'
 const FavoritesPage = () => {
   return (
     <>
-    <h2 className='titleF'>Favoritos</h2>
+    <h1 className='titleF'>Gatitos Favoritos</h1>
         <Favorites />
     </>
   )
