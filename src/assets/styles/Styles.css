@@ -97,6 +97,8 @@ body.dark-theme {
     --footer-background: #458199; /* Footer muy oscuro */
     --footer-text: #e2e8f0; /* Texto de footer claro */
 
+    background-image: url('../images/fondo-huellas-dark.svg');
+
 }
 
 
@@ -137,7 +139,7 @@ body {
 
 /* Huella en modo oscuro */
 body.dark-theme::before {
-    background-image: url('../images/fondo-huellas.svg');
+    background-image: url('../images/fondo-huellas-dark.svg');
     opacity: 0.05; /* Por ejemplo, un poco menos visible en oscuro */
 }
 

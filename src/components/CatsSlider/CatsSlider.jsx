@@ -14,7 +14,6 @@ const CatsSlider = () => {
   const [startX, setStartX] = useState(0);
   const [currentX, setCurrentX] = useState(0);
   const { favorites, toggleFavorite } = useFavorites();
-  const [isHovered, setIsHovered] = useState(false);
   const sliderRef = useRef(null);
   const intervalRef = useRef(null);
 
@@ -195,26 +194,6 @@ const CatsSlider = () => {
               }
             >
 
-              {i === 1 && (
-                <div 
-                  className="heart-icon"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    toggleFavorite(catsData[index]?.id);
-                  }}
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                >
-                  <i className={
-                    favorites.includes(catsData[index]?.id)
-                      ? "fa-solid fa-heart text-red-500"
-                      : isHovered
-                        ? "fa-solid fa-heart text-red-300"
-                        : "fa-solid fa-heart text-gray-300"
-                  }/>
-                </div>
-              )}
-
               <Card
                 id={catsData[index]?.breeds[0]?.name}
                 url={catsData[index]?.url}
@@ -225,6 +204,9 @@ const CatsSlider = () => {
                   if (i === 0) prevSlide();
                   else if (i === 2) nextSlide();
                 }}
+                showFavorite={i === 1} // Solo muestra corazón en la card central
+                isFavorite={favorites.includes(catsData[index]?.id)}
+                onFavoriteClick={() => toggleFavorite(catsData[index]?.id)}
                 style={{ cursor: isDragging ? "grabbing" : "grab" }}
               />
             </div>

@@ -2,4 +2,9 @@
   text-align: center;
   margin: 0px 0 60px;
   padding: 10px;
+  color: #ff6b6b;
+}
+
+body.dark-theme .home-title {
+  color: #E2E8F0;
 }

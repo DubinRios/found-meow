@@ -1,0 +1,60 @@
+.adoption-counter {
+  background-color: #f89fb0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.adoption-counter__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.adoption-counter__number {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #e63946;
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.adoption-counter__text {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.adoption-counter__note {
+  font-size: 0.85rem;
+  color: #e63946;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.adoption-counter__digits {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  /* margin-bottom: 1rem; */
+}
+
+.adoption-counter__digit {
+  background-color: #fff;
+  color: #e63946;
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding: 0.5rem 0.2rem;
+  border-radius: 5px;
+  width: 3rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.adoption-counter__digit:hover {
+  transform: scale(1.05);
+}
