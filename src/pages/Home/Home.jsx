@@ -7,8 +7,10 @@ const Home = () => {
   return (
     <>
 
-      <h2 className='home-title'>Gatitos buscando hogar</h2>
-      <CatsSlider />
+      <div className='home'>
+        <h2 className='home__title'>Gatitos buscando hogar</h2>
+        <CatsSlider />
+      </div>
       <AdoptionCounter />
       
     </>
