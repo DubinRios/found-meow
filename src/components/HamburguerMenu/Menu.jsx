@@ -1,14 +1,15 @@
 import './Menu.css';
 import { Link } from 'react-router-dom';
-
+import { useTheme } from '../../context/ThemeContext/ThemeContext';
 
 const Menu = ({isOpen, toggleMenu}) => { 
-     
-    
+
+  const { theme } = useTheme();
+      
   return (
-    <div>
+    <div className={`hamburger-menu ${theme}`}>
     <div className="hamburger-menu" onClick={toggleMenu}>
-          <div className={`menu-icon ${isOpen ? 'open' : ''}`}>
+          <div className={`menu-icon ${isOpen ? 'open' : ''} ${theme}`}>
             <div className="circle"></div>
             <div className="lines">
               <div className="line line1"></div>

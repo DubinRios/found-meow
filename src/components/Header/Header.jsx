@@ -2,8 +2,11 @@ import React, { useRef, useState, useEffect } from 'react';
 import './Header.css';
 import SearchBar from '../SearchBar/SearchBar';
 import logoImg from "../../assets/images/logo-found-meow.svg"
+import logoDark from "../../assets/images/logo-found-meow-light.svg"
 import { Link } from 'react-router-dom';
 import Menu from '../HamburguerMenu/Menu';
+import { useTheme } from '../../context/ThemeContext/ThemeContext';
+
 
 const Header = () => {
   
@@ -36,11 +39,13 @@ const Header = () => {
         };
       }, [isOpen]);
 
+      const { theme } = useTheme();
+
   return (
     <header className="header" ref={menuRef}>
       <div className="logo-container">
       <Link to="/">
-        <img src={logoImg} alt="Logo de la Empresa" />
+        <img src={theme === 'dark' ? logoDark : logoImg} alt="Logo de la Empresa" />
         </Link>
       </div>
       

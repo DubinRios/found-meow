@@ -1,0 +1,16 @@
+.formulario--confirmacion {
+  text-align: center;
+  border-color: #b6e1b6;
+  background-color: #eafbea;
+}
+
+.formulario__titulo {
+  color: var(--text-color);
+  margin-top: 20px;
+}
+
+.formulario__mensaje {
+  padding: 10px 20px 30px 20px;
+  font-size: 1rem;
+  color: var(--secondary-text-color);
+}
