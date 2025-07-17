@@ -1,10 +1,16 @@
-.home-title {
+.home {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+.home__title {
   text-align: center;
   margin: 0px 0 60px;
   padding: 10px;
   color: #ff6b6b;
 }
 
-body.dark-theme .home-title {
+body.dark-theme .home__title {
   color: #E2E8F0;
 }

@@ -43,7 +43,7 @@ const TeamMembers = [
 const TeamSection = () => {
   return (
     <>
-      <section>
+      <section className='teamSection__section'>
               <h2>Nuestro equipo</h2>
             <div className='team-flex'>
                 {TeamMembers.map((member, idx) => (
