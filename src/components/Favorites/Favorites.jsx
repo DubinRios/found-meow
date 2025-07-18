@@ -3,10 +3,12 @@ import './Favorites.css';
 import Card from '../Card/Card';
 import { getSingleCat } from '../../services/catApiServices';
 import { useFavorites } from '../../hooks/useFavorites';
+import { useTranslation } from 'react-i18next';
 
 const Favorites = () => {
   const { favorites, toggleFavorite } = useFavorites();
   const [favoriteCats, setFavoriteCats] = useState([]);
+    const { t } = useTranslation();
 
   useEffect(() => {
     const loadFavoriteCats = async () => {
@@ -30,7 +32,7 @@ const Favorites = () => {
   return (
     <div className="cards-fav">
       {favoriteCats.length === 0 ? (
-        <h3>No tienes ningún gato favorito aún.</h3>
+        <h3>{t("No tienes ningún gato favorito aún.")}</h3>
       ) : (
         [...favoriteCats].reverse().map(cat => (
           <Card

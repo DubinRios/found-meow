@@ -1,21 +1,26 @@
 import React from 'react'
 import './Footer.css'
 import { Link } from 'react-router-dom'
+import LanguageSwitcher from '../../LanguageSwitcher/LanguageSwitcher'
+import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
+    const { t } = useTranslation();
   return (
-      <footer className='footer'>
+    <footer className='footer'>
           <nav className='footer-nav'> 
-              <Link to="/contact">Contacto</Link>
+              <Link to="/contact">{t("Contacto")}</Link>
               <span className="footer-separator">|</span>
-              <a href="">Misión y Visión</a>
+              <a href="">{t("Misión y Visión")}</a>
               <span className="footer-separator">|</span>
-              <a href="">T&S</a>
+              <a href="">{t("T&S")}</a>
           </nav>
           <p className='footer-copyright'>
-              &copy; {new Date().getFullYear()} Found Meow. Todos los derechos reservados
+              &copy; {new Date().getFullYear()} {t("Found Meow. Todos los derechos reservados")}
           
-          </p> 
+      </p> 
+      <LanguageSwitcher />
+      
           {/* (© - &copy;) */}
 </footer>
   )

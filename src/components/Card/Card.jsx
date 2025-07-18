@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './Card.css';
 import Boton from '../Boton/Boton';
+import { useTranslation } from 'react-i18next';
 
 const Card = (props) => {
   const [isHovered, setIsHovered] = useState(false);
+    const { t } = useTranslation();
   const [showDescription, setShowDescription] = useState(false)
-  
 
   const handleFavoriteClick = (e) => {
     e.stopPropagation();
@@ -29,8 +30,8 @@ const Card = (props) => {
         <h2 className='cardCats__id'>
             {props.id}
         </h2>
-        <h4 className='cardCats__temperament'>
-            Nací en: {props.temperament}
+        <h4 class='cardCats__temperament'>
+            {t('Nací en:')} {props.temperament}
         </h4>
       </div>
 

@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./AdoptionCounter.css";
+import { useTranslation } from "react-i18next";
 
 const AdoptionCounter = () => {
+  const { t } = useTranslation();
+
   const [count, setCount] = useState(0);
   const target = 41886;
 
@@ -33,11 +36,11 @@ const AdoptionCounter = () => {
           ))}
         </div>
         <p className="adoption-counter__text">
-          <i class="fa-solid fa-house adoption-counter__icon"></i> &nbsp; Gatitos que han encontrado un nuevo hogar. <br />
-          <i class="fa-solid fa-heart adoption-counter__icon"></i> &nbsp; Historias de adopción que nos llenan de alegría.
+          <i class="fa-solid fa-house adoption-counter__icon"></i> &nbsp; {t("Gatitos que han encontrado un nuevo hogar.")} <br />
+          <i class="fa-solid fa-heart adoption-counter__icon"></i> &nbsp; {t("Historias de adopción que nos llenan de alegría.")}
         </p>
         <p className="adoption-counter__note">
-          *Adopciones virtuales desde 2018.
+          {t("*Adopciones virtuales desde 2018.")}
         </p>
       </div>
     </section>

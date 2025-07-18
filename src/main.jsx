@@ -7,6 +7,7 @@ import { ThemeProvider } from './context/ThemeContext/ThemeContext'; // Tu ruta 
 import ThemeToggle from './components/ThemeToggle/ThemeToggle'; // <-- ¡IMPORTA EL THEMETOGGLE!
 import './assets/styles/Styles.css';
 import './App.css';
+import './i18n/i18n';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -67,12 +67,12 @@ h2,
   margin-bottom: 1.2em;
   font-size: clamp(1rem, 1.5vw + 0.25rem, 1.2rem);
 }
-
+/* 
 .team-bio {
   font-size: clamp(0.875rem, 1vw + 0.25rem, 1rem);
   line-height: 1.5;
   margin-top: 0;
-}
+} */
 
 /* @media screen and (max-width: 1998px) {
   .team-card {
