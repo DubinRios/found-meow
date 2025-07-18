@@ -1,6 +1,7 @@
 // SearchBar.jsx
 import React, { useState } from 'react';
 import './SearchBar.css';
+import { useTranslation } from 'react-i18next';
 
 const SearchBar = ({ onSearch }) => {
   const [query, setQuery] = useState('');
@@ -16,12 +17,14 @@ const SearchBar = ({ onSearch }) => {
     }
   };
 
+  const { t } = useTranslation();
+
   return (
     <div className="search-bar-container">
       <form onSubmit={handleSubmit} className="search-form">
         <input
           type="text"
-          placeholder="Encuentra un gatito..."
+          placeholder={t("Encuentra un gatito...")}
           value={query}
           onChange={handleChange}
           className="search-input"
