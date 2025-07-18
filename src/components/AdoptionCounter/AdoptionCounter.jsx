@@ -33,8 +33,8 @@ const AdoptionCounter = () => {
           ))}
         </div>
         <p className="adoption-counter__text">
-          - Gatitos que han encontrado un nuevo hogar. <br />
-          - Historias de adopción que nos llenan de alegría.
+          <i class="fa-solid fa-house adoption-counter__icon"></i> &nbsp; Gatitos que han encontrado un nuevo hogar. <br />
+          <i class="fa-solid fa-heart adoption-counter__icon"></i> &nbsp; Historias de adopción que nos llenan de alegría.
         </p>
         <p className="adoption-counter__note">
           *Adopciones virtuales desde 2018.

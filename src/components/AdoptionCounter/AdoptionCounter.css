@@ -24,7 +24,6 @@
 .adoption-counter__text {
   font-family: var(--font-heading);
   font-size: 1,2rem;
-  color: #000;
   margin-bottom: 0.5rem;
 }
 
@@ -57,4 +56,9 @@
 
 .adoption-counter__digit:hover {
   transform: scale(1.05);
+}
+
+.adoption-counter__icon {
+  color: #e63946;
+  font-size: 0.95rem;
 }

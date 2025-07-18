@@ -11,31 +11,31 @@ const TeamMembers = [
         name: "Dubin Rios",
         role: "full stack",
         image: catImg,
-        bio: "Es necesario añadir algo"
+        bio: ""
     },
     {
         name: "Yelyzaveta Krasiuk",
         role: "full stack",
         image: cat2Img,
-        bio: "Es necesario añadir algo"
+        bio: ""
     },
     {
         name: "Jesus Martin",
         role: "full stack",
         image: cat3Img,
-        bio: "Es necesario añadir algo"
+        bio: ""
     },
     {
         name: "Miguel Rodriguez",
         role: "full stack",
         image: cat4Img,
-        bio: "Es necesario añadir algo"
+        bio: ""
     },
     {
         name: "Paula Apse",
         role: "full stack",
         image: cat5Img,
-        bio: "Es necesario añadir algo"
+        bio: ""
     }
 ]
 
