@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 const Card = (props) => {
   const [isHovered, setIsHovered] = useState(false);
     const { t } = useTranslation();
+  const [showDescription, setShowDescription] = useState(false)
 
   const handleFavoriteClick = (e) => {
     e.stopPropagation();
@@ -14,14 +15,19 @@ const Card = (props) => {
     }
   };
 
+  const handleShowDescription = () => {
+    setShowDescription(!showDescription)
+    console.log(props.description.length)
+  }
+
   return (
 
-    <div className='cardCats'>
-      <div>
-        <div className='cardCats__imgContainer'>
-          <img className='cardCats__image' src={props.url} alt={props.imgRota} />
+    <div className='cardCats' onClick={!props.isActive ? props.onClick : handleShowDescription}>
+      <div className={`cardCats__frontCard ${!showDescription ? '' : 'hidden'}`}>
+        <div className={`cardCats__imgContainer ${props.isActive? 'pointer scaling' : ''}` }>
+          <img className='cardCats__image unselectable-img' src={props.url} alt={props.imgRota} />
         </div>
-        <h2 class='cardCats__id'>
+        <h2 className='cardCats__id'>
             {props.id}
         </h2>
         <h4 class='cardCats__temperament'>
@@ -29,7 +35,15 @@ const Card = (props) => {
         </h4>
       </div>
 
-      {props.showFavorite && (
+      <div className={`cardCats__reverseCard ${showDescription ? '' : 'hidden'}`} >
+        <div className={`${props.isActive? 'pointer' : ''}`}>
+          <p>
+            {props.description}
+          </p>
+        </div>
+      </div>
+
+      {props.isActive && (
         <div 
           className="heart-icon"
           onClick={handleFavoriteClick}

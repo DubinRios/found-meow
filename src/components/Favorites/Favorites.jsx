@@ -40,9 +40,10 @@ const Favorites = () => {
             id={cat.breeds[0]?.name}
             url={cat.url}
             temperament={cat.breeds[0]?.origin}
+            description={cat.breeds[0].description}
             isLoaded={true}
             onClick={() => {}}
-            showFavorite={true}
+            isActive={true}
             isFavorite={favorites.includes(cat.id)}
             onFavoriteClick={() => toggleFavorite(cat.id)}
           />

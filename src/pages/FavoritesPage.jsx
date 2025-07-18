@@ -7,7 +7,7 @@ const FavoritesPage = () => {
 
   return (
     <>
-    <h2 className='titleF'>{t("Favoritos")}</h2>
+    <h1 className='titleF'>{t("Favoritos")}</h1>
         <Favorites />
     </>
   )

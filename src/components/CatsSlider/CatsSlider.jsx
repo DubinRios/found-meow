@@ -199,14 +199,15 @@ const CatsSlider = () => {
                 url={catsData[index]?.url}
                 temperament={catsData[index]?.breeds[0]?.origin}
                 imgRota={catsData[index]?.imgRota}
+                description={catsData[index].breeds[0].description}
                 isLoaded={loadedImages[index]}
                 onClick={() => {
                   if (i === 0) prevSlide();
                   else if (i === 2) nextSlide();
                 }}
-                showFavorite={i === 1} // Solo muestra corazón en la card central
                 isFavorite={favorites.includes(catsData[index]?.id)}
                 onFavoriteClick={() => toggleFavorite(catsData[index]?.id)}
+                isActive={i===1}
                 style={{ cursor: isDragging ? "grabbing" : "grab" }}
               />
             </div>

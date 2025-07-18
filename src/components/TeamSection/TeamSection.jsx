@@ -43,8 +43,8 @@ const { t } = useTranslation();
     return (
       
     <>
-      <section>
-              <h2>{t("Nuestro equipo")}</h2>
+        <section className='teamSection__section'>
+                <h2>{t("Nuestro equipo")}</h2>
             <div className='team-flex'>
                 {TeamMembers.map((member, idx) => (
                     <div key={idx} className='team-card'>
