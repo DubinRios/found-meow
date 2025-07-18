@@ -15,6 +15,9 @@
   flex-direction: column;
 }
 
+.cardCats__frontCard {
+  min-height: 342px;
+}
 
 .cardCats__reverseCard {
   min-height: 342px;
@@ -179,20 +182,10 @@ body.dark-theme .cardCats {
     right: 10px;
     font-size: 1.5rem;
   }
-  
-  .imgContainer {
-    width: 280px;
-    height: 240px;
-  }
 }
 
 @media (max-width: 480px) {
   .card-heart {
     font-size: 1.3rem;
-  }
-  
-  .imgContainer {
-    width: 240px;
-    height: 200px;
   }
 }
