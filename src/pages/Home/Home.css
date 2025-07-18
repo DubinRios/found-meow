@@ -4,13 +4,37 @@
   min-height: 80vh;
 }
 
-.home__title {
+.home-container {
   text-align: center;
-  margin: 0px 0 60px;
-  padding: 10px;
-  color: #ff6b6b;
+  max-width: 1200px;     
+  margin: 0 auto;        
+  padding: 20px;  
 }
 
-body.dark-theme .home__title {
+.home__title {
+  font-family: var(--font-heading);
+  text-align: center;
+  padding: 10px;
+  display: block;
+    color: #ff6b6b; 
+}
+
+.home__subtitle {
+  text-align: center;
+  margin: 0px 0 20px;
+  margin-left: 350px;
+  margin-right: 350px;
+  padding: 10px;
+}
+
+.home__text {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  text-align: center; 
+  max-width: 800px;   /* Por ejemplo, 800px para pantallas grandes */
+  margin: 0 auto 40px auto; 
+}
+
+body.dark-theme .home-title {
   color: #E2E8F0;
 }

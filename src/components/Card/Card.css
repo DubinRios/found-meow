@@ -1,25 +1,40 @@
-.card {
-  flex-shrink: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+.cardCats {
+  text-align: center;
   position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  cursor: grab;
+  color: var(--text-color);
+  background-color: var(--background-color);
   border-radius: 10px;
-  max-width: 340px;
-  max-height: 420px;
+  box-shadow: 0px 5px 15px rgb(175, 175, 175);
+  overflow: hidden;
+  padding: 0;
+  color: rgb(44, 44, 44);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  width: 340px;
+  height: 387px;
+  display: flex;
+  flex-direction: column;
 }
 
+
 .cardCats__reverseCard {
-  min-height: 330px;
+  min-height: 342px;
   display: flex;
   align-items: center;
   padding: 10px;
-  min-width: 325px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+body.dark-theme .cardCats__reverseCard {
+  background-color: #1E293B;
+}
+
+.cardCats__reverseCard p {
+  max-height: 330px;
 }
 
 .card:active {
-  cursor: grabbing;
+  cursor: grabbing ;
 }
 
 .card.active {
@@ -33,20 +48,7 @@
   opacity: 0.7;
   z-index: 1;
   filter: blur(1px);
-}
-
-.cardCats {
-  text-align: center;
-  position: relative;
-  color: var(--text-color);
-  background-color: var(--background-color);
-  border-radius: 10px;
-  box-shadow: 0px 5px 15px rgb(175, 175, 175);
-  overflow: hidden;
-  padding: 0;
-  text-align: center;
-  color: rgb(44, 44, 44);
-  max-width: 330px;
+  cursor: grab !important;
 }
 
 body.dark-theme .cardCats {
@@ -57,9 +59,19 @@ body.dark-theme .cardCats {
     display: flex;
     margin: auto;
     border-radius: 10px;
-    width: 330px;
     height: 280px;
     overflow: hidden;
+    transition: 0.4s ease;
+}
+
+
+.pointer:hover {
+  cursor: pointer;
+  scale: 1.05
+}
+
+.scaling:hover {
+  scale: 1.1;
 }
 
 .cardCats__image {
